@@ -1,0 +1,37 @@
+---
+const links = [
+  { label: 'Features', href: '#features' },
+  { label: 'How It Works', href: '#how-it-works' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center">
+      <img
+        src="/logos/Pharus_Full_Logo_Horizontal.png"
+        alt="Pharus"
+        class="h-8"
+      />
+    </a>
+
+    <div class="flex items-center gap-8">
+      <div class="hidden md:flex items-center gap-6">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-pharus-gray hover:text-pharus-dark transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+      <a
+        href="#contact"
+        class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white rounded-lg bg-gradient-to-r from-pharus-blue to-pharus-purple hover:opacity-90 transition-opacity"
+      >
+        Request a Demo
+      </a>
+    </div>
+  </nav>
+</header>

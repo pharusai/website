@@ -1,0 +1,47 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Choose Your Modules',
+    description: 'Start with what you need. Sales orders, production, inventory — pick the modules that fit your operations today.',
+  },
+  {
+    number: '2',
+    title: 'Connect Your Data',
+    description: 'Import your existing data or start fresh. Pharus integrates with your workflow from day one.',
+  },
+  {
+    number: '3',
+    title: 'Scale As You Grow',
+    description: 'Add modules as your supply chain evolves. No bloated packages, no wasted features.',
+  },
+];
+---
+
+<section id="how-it-works" class="bg-white py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold">How it works</h2>
+      <p class="mt-4 text-lg text-pharus-gray">
+        Get up and running in three simple steps.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+      {steps.map((step, i) => (
+        <div class="relative text-center">
+          {/* Connector line (hidden on mobile, hidden on last item) */}
+          {i < steps.length - 1 && (
+            <div class="hidden md:block absolute top-6 left-[calc(50%+2rem)] right-[calc(-50%+2rem)] h-px bg-gradient-to-r from-pharus-blue to-pharus-purple"></div>
+          )}
+
+          <div class="relative inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pharus-blue to-pharus-purple text-white font-bold text-lg mb-4">
+            {step.number}
+          </div>
+          <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+          <p class="text-pharus-gray max-w-xs mx-auto">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
