@@ -41,7 +41,9 @@ python3 -m http.server 8000
 
 | Target | Where |
 |---|---|
-| `https://app.pharus.ai` | Log in, all "Start free trial" CTAs |
+| `https://app.pharus.ai/new-organization` | every "Start free trial" / "Start 14-day trial" CTA (6 of them) |
+| `https://app.pharus.ai` | "Log in" only — header and footer |
+| Google Calendar appointment schedule | "Book a working session" — 30 min, auto-generates a Meet link |
 | `mailto:marshall@pharus.ai` | "Talk to us", footer Contact |
 | `#why` `#day` `#pricing` `#top` | nav + footer |
 
