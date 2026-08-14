@@ -41,10 +41,25 @@ python3 -m http.server 8000
 
 | Target | Where |
 |---|---|
-| `https://app.pharus.ai/new-organization` | every "Start free trial" / "Start 14-day trial" CTA (6 of them) |
+| `https://app.pharus.ai/new-organization` | self-serve: header "Start free trial", hero, Foundation, Multichannel, closing CTA (5) |
+| Google Calendar appointment schedule | sales-assisted: Wholesale "Talk to us", Full operator "Talk to us", "Book a working session" (3) |
 | `https://app.pharus.ai` | "Log in" only — header and footer |
-| Google Calendar appointment schedule | "Book a working session" — 30 min, auto-generates a Meet link |
-| `mailto:marshall@pharus.ai` | "Talk to us", footer Contact |
+| `mailto:marshall@pharus.ai` | footer Contact |
 | `#why` `#day` `#pricing` `#top` | nav + footer |
 
 `#faq` exists as a section but nothing links to it yet.
+
+## Mobile
+
+The design source has **no media queries at all**. Three `<style>` blocks in
+`<head>` supply them — do not drop these if you re-export:
+
+1. smooth scrolling + `scroll-margin-top` for anchors
+2. header/timeline fixes (`.ph-hdr`, `.ph-nav`, `.ph-hdr-cta`, `.ph-day-row`)
+3. layout fixes (`.ph-hero-grid`, `.ph-kpi`, `.ph-price-grid`, `.ph-why-grid`,
+   `.ph-sec`, `.ph-wrap`)
+
+Without #3 the hero stays a two-column grid on phones and the "Pharus operating
+view" card is pushed off-canvas and clipped by the hero's `overflow:hidden` —
+invisible to every mobile visitor. Pricing likewise collapses four tiers into
+81px columns.
