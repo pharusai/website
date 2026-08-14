@@ -442,6 +442,28 @@ html{scroll-behavior:smooth}
   .ph-why-grid>div:last-child{border-bottom:0}
 }
 </style>
+<style>
+/* Annual/monthly billing toggle — two radios + label pill, no JavaScript. */
+.ph-bill-in{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.ph-bill{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:38px 0 28px}
+.ph-bill-pill{display:inline-flex;padding:4px;border:1px solid #E4E4E7;border-radius:20px;background:#fff}
+.ph-bill-lbl{cursor:pointer;padding:8px 18px;border-radius:16px;font-size:13.5px;font-weight:600;
+  color:#71717A;user-select:none;transition:background .15s ease,color .15s ease;line-height:1}
+.ph-bill-lbl:hover{color:#18181B}
+#ph-bill-yr:checked~.ph-bill .ph-bill-lbl.ph-bill-yr,
+#ph-bill-mo:checked~.ph-bill .ph-bill-lbl.ph-bill-mo{background:#18181B;color:#fff}
+.ph-bill-note{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.04em;
+  color:#16A34A;transition:opacity .15s ease}
+#ph-bill-mo:checked~.ph-bill .ph-bill-note{opacity:0}
+.ph-bill-in:focus-visible~.ph-bill .ph-bill-pill{outline:2px solid #5A8CFE;outline-offset:2px}
+
+/* price swap */
+#ph-bill-yr:checked~.ph-price-grid .ph-mo{display:none}
+#ph-bill-mo:checked~.ph-price-grid .ph-yr{display:none}
+
+@media (prefers-reduced-motion:reduce){.ph-bill-lbl,.ph-bill-note{transition:none}}
+@media (max-width:700px){.ph-bill{margin:30px 0 22px;gap:10px}}
+</style>
 </head>
 <body>
 <span id="top" aria-hidden="true"></span>
@@ -617,14 +639,23 @@ html{scroll-behavior:smooth}
       <div>
         <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600;">Pay for the work you hand over.</h2>
       </div>
-      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">One ladder: each tier hands Pharus more of the operation. Prices shown are annual, saving up to 33% versus monthly. Every tier starts with a 14-day free trial.</p>
+      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">One ladder: each tier hands Pharus more of the operation. Every tier starts with a 14-day free trial.</p>
     </div>
 
-    <div class="ph-price-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 0px; border: 1px solid rgb(228, 228, 231); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255);">
+    <input type="radio" name="ph-bill" id="ph-bill-yr" class="ph-bill-in" checked>
+<input type="radio" name="ph-bill" id="ph-bill-mo" class="ph-bill-in">
+<div class="ph-bill" role="group" aria-label="Billing period">
+  <span class="ph-bill-pill">
+    <label for="ph-bill-yr" class="ph-bill-lbl ph-bill-yr">Annual</label>
+    <label for="ph-bill-mo" class="ph-bill-lbl ph-bill-mo">Monthly</label>
+  </span>
+  <span class="ph-bill-note">Save up to 33%</span>
+</div>
+<div class="ph-price-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 0px; border: 1px solid rgb(228, 228, 231); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255);">
       <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
         <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">01 · Foundation</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$199</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $299/mo monthly</div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$199</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$299</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 33%</span><span class="ph-mo">billed monthly</span></div>
         <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">See real margins on one storefront.</div>
         <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
           <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Shopify inventory and sales</li>
@@ -636,8 +667,8 @@ html{scroll-behavior:smooth}
       </div>
       <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column; background: linear-gradient(rgb(247, 244, 255) 0%, rgb(255, 255, 255) 72%); box-shadow: rgb(105, 70, 189) 0px 3px 0px inset;">
         <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">02 · Multichannel</span><span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; height: 21px; padding: 0px 9px; border-radius: 20px; background: rgb(24, 24, 27); color: rgb(255, 255, 255);">Most start here</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$999</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $1,200/mo monthly</div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$999</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,200</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 17%</span><span class="ph-mo">billed monthly</span></div>
         <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">One inventory picture across every channel.</div>
         <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
           <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Foundation, plus</li>
@@ -649,8 +680,8 @@ html{scroll-behavior:smooth}
       </div>
       <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
         <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">03 · Wholesale</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,999</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $2,500/mo monthly</div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,999</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$2,500</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 20%</span><span class="ph-mo">billed monthly</span></div>
         <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">Wholesale orders to cash, without the chase.</div>
         <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
           <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Multichannel, plus</li>

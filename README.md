@@ -63,3 +63,20 @@ Without #3 the hero stays a two-column grid on phones and the "Pharus operating
 view" card is pushed off-canvas and clipped by the hero's `overflow:hidden` —
 invisible to every mobile visitor. Pricing likewise collapses four tiers into
 81px columns.
+
+## Pricing toggle
+
+Annual/monthly switching is **CSS-only** — two visually-hidden radio inputs
+(`#ph-bill-yr` / `#ph-bill-mo`) sit as siblings of `.ph-price-grid`, and sibling
+combinators show or hide the `.ph-yr` / `.ph-mo` spans. Both prices are always in
+the DOM. No JavaScript, works with keyboard arrows, no flash on load.
+
+The radios **must stay direct siblings of `.ph-price-grid`** — moving them inside
+a wrapper breaks the `~` selectors and the toggle silently stops working.
+
+| Tier | Annual | Monthly |
+|---|---|---|
+| Foundation | $199 | $299 |
+| Multichannel | $999 | $1,200 |
+| Wholesale | $1,999 | $2,500 |
+| Full operator | Custom | Custom |
