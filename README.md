@@ -1,43 +1,48 @@
-# Astro Starter Kit: Minimal
+# pharus.ai — marketing site
+
+Static landing page for Pharus. **No build step.** Every file here is served as-is
+from the repo root.
+
+## Layout
+
+```
+index.html            the whole page — inline CSS, zero JavaScript
+fonts/*.woff2         Inter + JetBrains Mono, self-hosted (subset by unicode-range)
+favicon.svg           Pharus beam mark
+apple-touch-icon.png  180×180
+og.png                1200×630 social card
+robots.txt sitemap.xml
+_headers              cache + security headers (Cloudflare Pages / Netlify)
+.nojekyll             stops GitHub Pages from stripping _headers
+CNAME                 custom domain for GitHub Pages
+```
+
+## Editing
+
+`index.html` is a flattened export of the Claude Design source (`Pharus Landing.html`).
+It was rendered once and snapshotted, so the markup is plain HTML with inline styles —
+edit it directly. Two additions live in `<style>` blocks in `<head>`:
+
+- smooth scrolling + `scroll-margin-top` for the `#why` / `#day` / `#pricing` / `#faq` anchors
+- a responsive block (`@media max-width: 700px`) — the design source ships **no**
+  media queries, so the header and the "a day with Pharus" timeline rows are
+  corrected for phones here. Classes `.ph-hdr`, `.ph-nav`, `.ph-hdr-cta`,
+  `.ph-day-row` exist only for those overrides.
+
+If you re-export from Claude Design, re-apply both blocks.
+
+## Local preview
 
 ```sh
-npm create astro@latest -- --template minimal
+python3 -m http.server 8000
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Links used on the page
 
-## 🚀 Project Structure
+| Target | Where |
+|---|---|
+| `https://app.pharus.ai` | Log in, all "Start free trial" CTAs |
+| `mailto:marshall@pharus.ai` | "Talk to us", footer Contact |
+| `#why` `#day` `#pricing` `#top` | nav + footer |
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`#faq` exists as a section but nothing links to it yet.

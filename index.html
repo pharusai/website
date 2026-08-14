@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pharus — The AI operator that runs your back office</title>
+<meta name="description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<link rel="canonical" href="https://pharus.ai/">
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pharus">
+<meta property="og:url" content="https://pharus.ai/">
+<meta property="og:title" content="Pharus — The AI operator that runs your back office">
+<meta property="og:description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<meta property="og:image" content="https://pharus.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pharus — The AI operator that runs your back office">
+<meta name="twitter:description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<meta name="twitter:image" content="https://pharus.ai/og.png">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-greek-ext.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-greek-ext.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-greek-ext.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-greek-ext.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-greek.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#FFFFFF;color:#18181B;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#5A8CFE;text-decoration:none}
+a:hover{color:#3E74F5}
+@keyframes mq{to{transform:translateX(-50%)}}
+</style><style>
+html{scroll-behavior:smooth}
+#why,#day,#pricing,#faq{scroll-margin-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pharus", "url": "https://pharus.ai/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.", "publisher": {"@type": "Organization", "name": "Pharus Insights, Inc.", "url": "https://pharus.ai/"}}</script>
+<style>
+/* Responsive corrections — the source design ships no media queries. */
+@media (max-width: 700px){
+  .ph-hdr{flex-wrap:wrap!important;height:auto!important;gap:10px 16px!important;padding:16px 0 10px!important}
+  .ph-hdr-cta{gap:12px!important;flex-shrink:0}
+  .ph-nav{order:3;width:100%;justify-content:flex-start;gap:22px!important;padding-top:2px}
+  .ph-day-row{grid-template-columns:auto 1fr!important;gap:6px 14px!important}
+  .ph-day-row>span:nth-child(1){grid-row:1;grid-column:1}
+  .ph-day-row>span:nth-child(3){grid-row:1;grid-column:2;justify-self:end}
+  .ph-day-row>span:nth-child(2){grid-row:2;grid-column:1/-1}
+}
+@media (max-width: 380px){
+  .ph-nav{gap:16px!important;font-size:12.5px!important}
+}
+</style>
+</head>
+<body>
+<span id="top" aria-hidden="true"></span>
+<div id="dc-root"><div class="sc-host"><svg width="0" height="0" aria-hidden="true" style="position: absolute;">
+  <defs>
+    <linearGradient id="pg1" x1="48" y1="28.6" x2="100.2" y2="28.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a8cfe"></stop><stop offset="1" stop-color="#cc72e9" stop-opacity=".7"></stop></linearGradient>
+    <linearGradient id="pg2" x1="48" y1="62.7" x2="100.2" y2="62.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cc72e9" stop-opacity=".7"></stop><stop offset="1" stop-color="#5a8cfe"></stop></linearGradient>
+    <linearGradient id="pg3" x1="59.5" y1="55.6" x2="88.8" y2="55.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cc72e9" stop-opacity=".7"></stop><stop offset="1" stop-color="#5a8cfe"></stop></linearGradient>
+    <linearGradient id="pg4" x1="59.4" y1="35.7" x2="88.8" y2="35.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a8cfe"></stop><stop offset="1" stop-color="#cc72e9" stop-opacity=".7"></stop></linearGradient>
+    <linearGradient id="pg5" x1="30" y1="45.6" x2="66.8" y2="45.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="rgba(249,239,252,.4)"></stop><stop offset=".5" stop-color="rgba(220,159,240,.8)"></stop><stop offset="1" stop-color="#cc72e9"></stop></linearGradient>
+    <linearGradient id="pg6" x1="81.4" y1="45.6" x2="118.3" y2="45.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a8cfe"></stop><stop offset=".5" stop-color="rgba(150,182,254,.75)"></stop><stop offset="1" stop-color="#fff" stop-opacity=".3"></stop></linearGradient>
+  </defs>
+  <symbol id="ph-icon" viewBox="0 0 90.5 57"><g transform="translate(-29.6,-17.1)">
+    <path fill="url(#pg1)" d="M50.7,39.5c1.6.4,3.3-.5,3.9-2,3.2-7.6,10.7-13,19.5-13s16.3,5.4,19.5,13,2.3,2.4,3.9,2h0c2.1-.5,3.2-2.7,2.3-4.7-4.2-10.1-14.2-17.2-25.8-17.2s-21.6,7.1-25.8,17.2c-.8,2-.3,4.2,2.3,4.7h0Z"></path>
+    <path fill="url(#pg2)" d="M97.6,51.8c-1.6-.4-3.3.5-3.9,2-3.2,7.6-10.7,13-19.5,13s-16.3-5.4-19.5-13c-.6-1.5-2.3-2.4-3.9-2h0c-2.1.5-3.2,2.7-2.3,4.7,4.2,10.1,14.2,17.2,25.8,17.2s21.6-7.1,25.8-17.2c.8-2-.3-4.2-2.3-4.7h0Z"></path>
+    <path fill="url(#pg3)" d="M86.3,49.1c-1.4-.3-2.8.2-3.5,1.5-1.7,3-4.9,5.1-8.7,5.1s-6.9-2-8.7-5.1c-.7-1.2-2.1-1.8-3.5-1.5h0c-2.2.5-3.2,3-2,4.9,2.9,4.9,8.1,8.1,14.2,8.1s11.3-3.3,14.2-8.1c1.1-1.9.1-4.4-2-4.9h0Z"></path>
+    <path fill="url(#pg4)" d="M62,42.1c1.4.3,2.8-.2,3.5-1.4,1.7-3,4.9-5.1,8.7-5.1s6.9,2,8.7,5.1c.7,1.2,2.1,1.8,3.5,1.4h0c2.1-.5,3.2-2.9,2.1-4.7-2.8-4.9-8.2-8.2-14.3-8.2s-11.4,3.3-14.3,8.2c-1.1,1.9,0,4.2,2.1,4.7h0Z"></path>
+    <path fill="url(#pg5)" d="M66.8,45.6c0-.6-30.6-4.3-35.7-4.9-.4,0-.8.2-.8.6-.2,1.4-.3,2.9-.3,4.3s.1,2.9.3,4.3.4.7.8.6c5.1-.6,35.7-4.4,35.7-4.9Z"></path>
+    <path fill="url(#pg6)" d="M118,41.5c0-.5-.5-.9-1.1-.8-5.7.7-35.5,4.3-35.5,4.9s29.8,4.2,35.5,4.9,1-.3,1.1-.8c.2-1.3.3-2.7.3-4.1s-.1-2.7-.3-4.1Z"></path>
+  </g></symbol>
+  <symbol id="ph-word" viewBox="0 0 124.6 27.8"><g transform="translate(-11.85,-76.45)"><g fill="#6946bd">
+    <path d="M28.9,89.6c-.6,1.1-1.6,2.1-2.9,2.8-1.3.7-3,1.1-5.1,1.1h-4.6v10.2h-4.1v-25.2h8.7c1.9,0,3.6.3,4.9,1,1.3.7,2.3,1.6,3,2.7.7,1.1,1,2.4,1,3.8s-.3,2.5-.9,3.6ZM24.4,89c.8-.7,1.2-1.7,1.2-3,0-2.8-1.6-4.1-4.7-4.1h-4.6v8.2h4.6c1.6,0,2.7-.4,3.5-1.1Z"></path>
+    <path d="M48.6,84.3c1.2.7,2.1,1.6,2.8,2.9s1,2.8,1,4.6v11.8h-4.1v-11.2c0-1.8-.4-3.2-1.3-4.1-.9-1-2.1-1.4-3.7-1.4s-2.8.5-3.7,1.4c-.9,1-1.4,2.3-1.4,4.1v11.2h-4.1v-26.8h4.1v9.2c.7-.8,1.6-1.5,2.7-2,1.1-.5,2.3-.7,3.5-.7s2.9.3,4.1,1Z"></path>
+    <path d="M57.9,88.2c.8-1.5,2-2.8,3.4-3.6s3-1.3,4.8-1.3,2.9.3,4.1.9c1.2.6,2.1,1.4,2.8,2.3v-2.9h4.2v20h-4.2v-3c-.7.9-1.7,1.7-2.9,2.4-1.2.6-2.6.9-4.1.9s-3.3-.4-4.7-1.3c-1.4-.9-2.6-2.1-3.4-3.7-.8-1.6-1.3-3.4-1.3-5.4s.4-3.8,1.3-5.3ZM72.2,90.1c-.6-1-1.3-1.8-2.2-2.3s-1.9-.8-3-.8-2.1.3-3,.8-1.7,1.3-2.2,2.3-.9,2.2-.9,3.6.3,2.6.9,3.6c.6,1,1.3,1.8,2.2,2.4.9.5,1.9.8,3,.8s2.1-.3,3-.8c.9-.5,1.7-1.3,2.2-2.3.6-1,.9-2.2.9-3.6s-.3-2.6-.9-3.6Z"></path>
+    <path d="M89.5,84.2c1-.6,2.2-.9,3.6-.9v4.3h-1.1c-1.6,0-2.8.4-3.7,1.2-.8.8-1.3,2.2-1.3,4.3v10.5h-4.1v-20h4.1v2.9c.6-1,1.4-1.8,2.4-2.4Z"></path>
+    <path d="M115.4,83.7v20h-4.1v-2.4c-.7.8-1.5,1.5-2.6,1.9-1.1.5-2.2.7-3.4.7s-3-.3-4.2-1c-1.2-.7-2.2-1.6-2.9-2.9-.7-1.3-1.1-2.8-1.1-4.6v-11.7h4.1v11.1c0,1.8.4,3.2,1.3,4.1.9,1,2.1,1.4,3.7,1.4s2.8-.5,3.7-1.4c.9-1,1.4-2.3,1.4-4.1v-11.1h4.1Z"></path>
+    <path d="M124.2,103.1c-1.2-.6-2.2-1.3-3-2.3s-1.1-2.1-1.2-3.3h4.3c0,.8.5,1.6,1.2,2.1.7.6,1.7.9,2.8.9s2.1-.2,2.7-.7c.6-.4,1-1,1-1.7s-.4-1.3-1.1-1.7-1.8-.8-3.4-1.2c-1.5-.4-2.7-.8-3.7-1.2-.9-.4-1.8-1-2.4-1.8-.7-.8-1-1.8-1-3.2s.3-2,.9-2.9,1.5-1.6,2.7-2.1c1.2-.5,2.5-.8,4-.8,2.3,0,4.1.6,5.5,1.7,1.4,1.1,2.1,2.7,2.2,4.7h-4.1c0-.9-.4-1.6-1.1-2.1-.7-.5-1.5-.8-2.6-.8s-1.9.2-2.5.6-.9,1-.9,1.6.2,1,.6,1.3.9.6,1.4.9c.6.2,1.4.5,2.5.8,1.5.4,2.6.8,3.6,1.2.9.4,1.7,1,2.4,1.8.7.8,1,1.8,1.1,3.1,0,1.1-.3,2.2-.9,3-.6.9-1.5,1.6-2.7,2.1s-2.5.8-4,.8-3-.3-4.2-.9Z"></path>
+  </g></g></symbol></svg><div style="background: radial-gradient(circle at 85% 8%, rgba(105, 70, 189, 0.3), transparent 36%), radial-gradient(circle at 8% 90%, rgba(90, 140, 254, 0.12), transparent 30%), rgb(9, 9, 11); color: rgb(255, 255, 255); position: relative; overflow: hidden;">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <div class="ph-hdr" style="display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 76px;">
+      <a href="#top" style="display: flex; align-items: center; gap: 9px; color: rgb(255, 255, 255);">
+        <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height: 24px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-icon"></use></svg>
+        <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height: 13px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-word"></use></svg>
+      </a>
+      <nav class="ph-nav" style="display: flex; gap: 26px; font-size: 13.5px;">
+        <a href="#why" class="scp0" style="color: rgba(255, 255, 255, 0.66);">Why</a>
+        <a href="#day" class="scp0" style="color: rgba(255, 255, 255, 0.66);">How it works</a>
+        <a href="#pricing" class="scp0" style="color: rgba(255, 255, 255, 0.66);">Pricing</a>
+      </nav>
+      <div class="ph-hdr-cta" style="display: flex; align-items: center; gap: 16px;">
+        <a href="https://app.pharus.ai" class="scp0" style="font-size: 14px; color: rgba(255, 255, 255, 0.72);">Log in</a>
+        <a href="https://app.pharus.ai" class="scp1" style="display: inline-flex; align-items: center; height: 38px; padding: 0px 16px; border-radius: 8px; font-size: 13.5px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255); background: transparent;">Start free trial</a>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: minmax(320px, 560px) minmax(380px, 1fr); gap: 72px; align-items: center; padding: 96px 0px 104px;">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 9px; margin-bottom: 26px; padding: 7px 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 999px; background: rgba(255, 255, 255, 0.043); color: rgb(212, 212, 216); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.05em;">Inventory and operations for consumer goods brands</div>
+        <h1 style="margin: 0px; font-size: clamp(44px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.045em; font-weight: 600; max-width: 13ch;">The AI operator that <span style="background: linear-gradient(92deg, rgb(201, 185, 255) 10%, rgb(204, 114, 233) 55%, rgb(119, 160, 255) 100%) text; color: transparent;">runs your back office.</span></h1>
+        <p style="margin: 26px 0px 0px; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.55; color: rgb(161, 161, 170); max-width: 44ch;">Pharus tracks every unit and dollar of inventory across your channels, books the orders, matches the payments, and interrupts you only when a decision needs a human.</p>
+        <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
+          <a href="https://app.pharus.ai" class="scp2" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(255, 255, 255); color: rgb(9, 9, 11);">Start your 14-day free trial</a>
+          <a href="#day" class="scp1" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255);">See a day with Pharus →</a>
+        </div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 26px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500;">
+          <span>✓ Live in under 48 hours</span><span>✓ Works directly with Claude &amp; Codex</span><span>✓ Your data stays yours</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="border: 1px solid rgb(39, 39, 42); border-radius: 16px; background: rgba(20, 20, 22, 0.94); overflow: hidden; box-shadow: rgba(0, 0, 0, 0.95) 0px 50px 120px -30px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 18px; border-bottom: 1px solid rgb(39, 39, 42); font-size: 12px; font-weight: 600; color: rgb(228, 228, 231);">Pharus operating view <span style="display: flex; align-items: center; gap: 7px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(74, 222, 128); box-shadow: rgba(74, 222, 128, 0.1) 0px 0px 0px 4px;"></span>LIVE</span></div>
+          <div style="padding: 16px 18px; border-bottom: 1px solid rgb(39, 39, 42);">
+            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Done today, without you <b style="color: rgb(74, 222, 128); font-weight: 500;">42 tasks</b></div>
+            <div style="display: flex; gap: 7px; flex-wrap: wrap;">
+              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Orders booked</span>
+              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">POs raised</span>
+              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Payments matched</span>
+              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Inventory updated</span>
+              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Books proposed</span>
+            </div>
+          </div>
+          <div style="padding: 16px 18px; border-bottom: 1px solid rgb(39, 39, 42);">
+            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Month to date</div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">Revenue</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">$2.90M</b></div>
+              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">COGS</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">−$1.64M</b></div>
+              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">OpEx + S&amp;M</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">−$840K</b></div>
+              <div style="padding: 10px; border: 1px solid rgba(74, 222, 128, 0.24); border-radius: 8px; background: rgba(74, 222, 128, 0.05);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">Contribution</span><b style="display: block; margin-top: 4px; color: rgb(74, 222, 128); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">$420K</b></div>
+            </div>
+          </div>
+          <div style="padding: 16px 18px;">
+            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Needs your judgment <b style="color: rgb(196, 181, 253); font-weight: 500;">2 decisions</b></div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <div style="min-width: 0px;"><b style="display: block; color: rgb(228, 228, 231); font-size: 11.5px; font-weight: 500;">Move 120 units to Amazon?</b><span style="display: block; margin-top: 2px; color: rgb(113, 113, 122); font-size: 10px;">Demand is 2.4× higher there this week</span></div>
+              <em style="flex: 0 0 auto; padding: 5px 7px; border-radius: 6px; background: rgba(167, 139, 250, 0.1); color: rgb(196, 181, 253); font-style: normal; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 500;">REVIEW</em>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0px 0px;">
+              <div style="min-width: 0px;"><b style="display: block; color: rgb(228, 228, 231); font-size: 11.5px; font-weight: 500;">Hold spend on SKU 2140?</b><span style="display: block; margin-top: 2px; color: rgb(113, 113, 122); font-size: 10px;">11 days of stock · replenishment in 19</span></div>
+              <em style="flex: 0 0 auto; padding: 5px 7px; border-radius: 6px; background: rgba(167, 139, 250, 0.1); color: rgb(196, 181, 253); font-style: normal; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 500;">REVIEW</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+    <div style="border-top: 1px solid rgb(39, 39, 42); padding: 24px 0px; overflow: hidden;">
+      <div aria-hidden="true" style="display: flex; gap: 52px; white-space: nowrap; width: max-content; animation: 34s linear 0s infinite normal none running mq;">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Shopify</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Amazon</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">TikTok Shop</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Meta Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Google Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">3PLs</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">EDI</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">QuickBooks</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Gmail</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Shopify</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Amazon</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">TikTok Shop</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Meta Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Google Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">3PLs</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">EDI</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">QuickBooks</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Gmail</span>
+      </div>
+    </div>
+  </div><section id="why" style="padding: 140px 0px; background: rgb(255, 255, 255);">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600; max-width: 20ch;">An ops manager costs $120K a year. So you're still doing it yourself at 9pm.</h2>
+    <p style="margin: 18px 0px 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">Pharus isn't another dashboard to check. It's the hire you couldn't make. It does the operations work and reports back.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0px; border-top: 1px solid rgb(228, 228, 231); margin-top: 64px;">
+      <div style="padding: 36px 32px 0px 0px; border-right: 1px solid rgb(228, 228, 231);">
+        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">01</span>
+        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">It does the work</h3>
+        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">A PO lands in your inbox; the sales order is already booked. Invoices post, payments match, month-end closes, all before you've asked.</p>
+      </div>
+      <div style="padding: 36px 32px 0px; border-right: 1px solid rgb(228, 228, 231);">
+        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">02</span>
+        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">Only what needs you</h3>
+        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">Exceptions come to you with a recommendation and the evidence attached. You see six things, not sixty tabs. Silence means it's handled.</p>
+      </div>
+      <div style="padding: 36px 0px 0px 32px;">
+        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">03</span>
+        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">Every number ties out</h3>
+        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">A real inventory and costing ledger sits under the AI. Penny-accurate, with the receipt behind every figure one click away.</p>
+      </div>
+    </div>
+  </div></section><section id="day" style="padding: 140px 0px; background: rgb(9, 9, 11); color: rgb(255, 255, 255);">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
+      <div>
+        <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600;">An ordinary Tuesday, handled.</h2>
+      </div>
+      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(161, 161, 170); max-width: 52ch;">Nobody asked Pharus to do any of this. That's the point.</p>
+    </div>
+
+    <div style="border-top: 1px solid rgb(39, 39, 42);">
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">6:12am</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Booked three sales orders from the inbox</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">$61,204.19 ready</span>
+      </div>
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">8:40am</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Caught two orders claiming the same stock</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(240, 183, 94); white-space: nowrap;">needs your call</span>
+      </div>
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">11:05am</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Raised a PO for packaging before it ran out</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(113, 113, 122); white-space: nowrap;">$18,940.00 order</span>
+      </div>
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">1:30pm</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Flagged an ad campaign heading for a stockout</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(240, 183, 94); white-space: nowrap;">needs your call</span>
+      </div>
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">4:55pm</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Disputed a customer deduction, proof attached</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">$2,140.00 challenged</span>
+      </div>
+      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">9:00pm</span>
+        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Proposed the day's journal entries</span>
+        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">everything ties out</span>
+      </div>
+    </div>
+
+    <p style="margin: 44px 0px 0px; font-size: clamp(18px, 2vw, 26px); letter-spacing: -0.02em; font-weight: 500;">Two decisions needed you. <span style="color: rgb(82, 82, 91);">The rest was already done.</span></p>
+  </div></section><section id="pricing" style="padding: 140px 0px; background: rgb(250, 250, 250); border-top: 1px solid rgb(228, 228, 231);">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
+      <div>
+        <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600;">Pay for the work you hand over.</h2>
+      </div>
+      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">One ladder: each tier hands Pharus more of the operation. Prices shown are annual, saving up to 33% versus monthly. Every tier starts with a 14-day free trial.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 0px; border: 1px solid rgb(228, 228, 231); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255);">
+      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">01 · Foundation</span></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$199</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $299/mo monthly</div>
+        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">See real margins on one storefront.</div>
+        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Shopify inventory and sales</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Meta, Google, and TikTok ad spend</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Contribution margin by SKU</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>One clean inventory picture</li>
+        </ul>
+        <a href="https://app.pharus.ai" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Start 14-day trial</a>
+      </div>
+      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column; background: linear-gradient(rgb(247, 244, 255) 0%, rgb(255, 255, 255) 72%); box-shadow: rgb(105, 70, 189) 0px 3px 0px inset;">
+        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">02 · Multichannel</span><span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; height: 21px; padding: 0px 9px; border-radius: 20px; background: rgb(24, 24, 27); color: rgb(255, 255, 255);">Most start here</span></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$999</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $1,200/mo monthly</div>
+        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">One inventory picture across every channel.</div>
+        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Foundation, plus</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Amazon and TikTok Shop</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>One 3PL or warehouse</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Sales orders, in seconds not spreadsheets</li>
+        </ul>
+        <a href="https://app.pharus.ai" class="scp4" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(90, 140, 254); color: rgb(255, 255, 255);">Start 14-day trial</a>
+      </div>
+      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">03 · Wholesale</span></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,999</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">billed annually · $2,500/mo monthly</div>
+        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">Wholesale orders to cash, without the chase.</div>
+        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Multichannel, plus</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>EDI and inbox POs book themselves</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Remittances matched to invoices</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Deductions flagged with proof attached</li>
+        </ul>
+        <a href="https://app.pharus.ai" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Start 14-day trial</a>
+      </div>
+      <div style="padding: 34px 30px 32px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">04 · Full operator</span></div>
+        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.035em; line-height: 40px;">Custom</span></div>
+        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">annual agreement</div>
+        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">Your back office, staffed by us.</div>
+        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Wholesale, plus</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Fractional CFO and COO on your account</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Month-end close and collections done for you</li>
+          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Multiple entities, unlimited trading partners</li>
+        </ul>
+        <a href="mailto:marshall@pharus.ai" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Talk to us</a>
+      </div>
+    </div>
+    <p style="margin: 20px 0px 0px; text-align: center; font-size: 13px; color: rgb(113, 113, 122);">Start where you are today. Move up when the operation calls for it.</p>
+  </div></section><section id="faq" style="padding: 140px 0px; background: rgb(255, 255, 255);">
+  <div style="max-width: 800px; margin: 0px auto; padding: 0px 32px;">
+    <h2 style="margin: 0px 0px 36px; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 600;">Before you hand anything over.</h2>
+    <details open="" style="border-bottom: 1px solid rgb(228, 228, 231);">
+      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Is this another system my team has to manage?</summary>
+      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">No. Pharus works with the tools you already use, including directly with Claude and Codex, and does the routine work itself. You review its work; you don't feed it forms.</p>
+    </details>
+    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
+      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">What happens when Pharus isn't sure?</summary>
+      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">It asks one precise question with a recommended default and the original document attached. It never silently guesses on money, and you choose which actions always require review.</p>
+    </details>
+    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
+      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">What can Pharus see in my email?</summary>
+      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">Only the folders and senders you choose. It reads POs, invoices, and remittances into work. It never sends email as you, and you can remove access at any time.</p>
+    </details>
+    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
+      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">How long does setup take?</summary>
+      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">Under 48 hours for most brands. Connect your tools, and Pharus builds your inventory and order picture from your real data. We stay with you through the first live orders at every tier.</p>
+    </details>
+  </div></section><section style="padding: 140px 0px; background: radial-gradient(circle at 50% 0px, rgba(105, 70, 189, 0.38), transparent 48%), rgb(9, 9, 11); color: rgb(255, 255, 255); text-align: center;">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <h2 style="margin: 0px auto; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600; max-width: 16ch;">Hand the back office to Pharus.</h2>
+    <p style="margin: 24px auto 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.5; color: rgb(161, 161, 170); max-width: 46ch;">Start a free trial, or bring one customer PO and one vendor invoice to a 30-minute session and watch Pharus handle your real workflow.</p>
+    <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 38px;">
+      <a href="https://app.pharus.ai" class="scp2" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(255, 255, 255); color: rgb(9, 9, 11); box-shadow: rgba(255, 255, 255, 0.12) 0px 14px 40px;">Start your 14-day free trial</a>
+      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU" target="_blank" rel="noopener" class="scp1" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255);">Book a working session</a>
+    </div>
+  </div></section><footer style="background: rgb(9, 9, 11); color: rgb(113, 113, 122); padding: 64px 0px 40px; font-size: 13.5px; border-top: 1px solid rgb(39, 39, 42);">
+  <div style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+    <div style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+      <div>
+        <a href="#top" style="display: flex; align-items: center; gap: 9px;">
+          <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height: 24px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-icon"></use></svg>
+          <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height: 13px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-word"></use></svg>
+        </a>
+        <p style="color: rgb(82, 82, 91); max-width: 40ch; margin: 16px 0px 0px; font-size: 13px; line-height: 1.65;">The AI operator that runs inventory and the back office for consumer goods brands.</p>
+      </div>
+      <div style="display: flex; gap: 28px; flex-wrap: wrap;">
+        <a href="#why" class="scp0" style="color: rgb(113, 113, 122);">Why</a>
+        <a href="#day" class="scp0" style="color: rgb(113, 113, 122);">How it works</a>
+        <a href="#pricing" class="scp0" style="color: rgb(113, 113, 122);">Pricing</a>
+        <a href="mailto:marshall@pharus.ai" class="scp0" style="color: rgb(113, 113, 122);">Contact</a>
+        <a href="https://app.pharus.ai" class="scp0" style="color: rgb(113, 113, 122);">Log in</a>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgb(39, 39, 42); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(63, 63, 70);">
+      <span>© 2026 Pharus Insights, Inc.</span><span>pharus.ai</span>
+    </div>
+  </div></footer></div></div>
+
+</body></html>
