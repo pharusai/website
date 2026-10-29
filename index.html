@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pharus — The AI operator that runs your back office</title>
-<meta name="description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<title>Pharus — Inventory, managed</title>
+<meta name="description" content="Inventory management for consumer goods brands. Pharus keeps track of everything that falls off your radar, from the PO you never placed to the bill nobody paid, and brings each one to you ready to approve.">
 <link rel="canonical" href="https://pharus.ai/">
 <meta name="theme-color" content="#09090B">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -10,22 +10,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pharus">
 <meta property="og:url" content="https://pharus.ai/">
-<meta property="og:title" content="Pharus — The AI operator that runs your back office">
-<meta property="og:description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<meta property="og:title" content="Pharus — Inventory, managed">
+<meta property="og:description" content="Inventory management for consumer goods brands. Pharus keeps track of everything that falls off your radar, from the PO you never placed to the bill nobody paid, and brings each one to you ready to approve.">
 <meta property="og:image" content="https://pharus.ai/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pharus — The AI operator that runs your back office">
-<meta name="twitter:description" content="Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.">
+<meta name="twitter:title" content="Pharus — Inventory, managed">
+<meta name="twitter:description" content="Inventory management for consumer goods brands. Pharus keeps track of everything that falls off your radar, from the PO you never placed to the bill nobody paid, and brings each one to you ready to approve.">
 <meta name="twitter:image" content="https://pharus.ai/og.png">
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>x-dc{display:none!important}</style>
-<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><style>/* cyrillic-ext */
+<style>/* cyrillic-ext */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -385,89 +381,70 @@
   src: url("/fonts/jetbrains-mono-latin.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-</style><style>
+</style>
+<style>
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,sans-serif;background:#FFFFFF;color:#18181B;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:#5A8CFE;text-decoration:none}
-a:hover{color:#3E74F5}
-@keyframes mq{to{transform:translateX(-50%)}}
-</style><style>
-html{scroll-behavior:smooth}
-#why,#day,#pricing,#faq{scroll-margin-top:24px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pharus", "url": "https://pharus.ai/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Pharus books your orders, tracks inventory to the penny, matches the payments, and interrupts you only when a decision needs a human. The ops hire you can't afford.", "publisher": {"@type": "Organization", "name": "Pharus Insights, Inc.", "url": "https://pharus.ai/"}}</script>
-<style>
-/* Responsive corrections — the source design ships no media queries. */
-@media (max-width: 700px){
-  .ph-hdr{flex-wrap:wrap!important;height:auto!important;gap:10px 16px!important;padding:16px 0 10px!important}
-  .ph-hdr-cta{gap:12px!important;flex-shrink:0}
-  .ph-nav{order:3;width:100%;justify-content:flex-start;gap:22px!important;padding-top:2px}
-  .ph-day-row{grid-template-columns:auto 1fr!important;gap:6px 14px!important}
-  .ph-day-row>span:nth-child(1){grid-row:1;grid-column:1}
-  .ph-day-row>span:nth-child(3){grid-row:1;grid-column:2;justify-self:end}
-  .ph-day-row>span:nth-child(2){grid-row:2;grid-column:1/-1}
+body{margin:0;background:#09090B;color:#E4E4E7;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
+*{box-sizing:border-box}
+.ph-wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.ph-sec{padding:112px 0}
+.ph-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:10px;font-size:15px;font-weight:600;white-space:nowrap;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.ph-btn-primary{background:#5A8CFE;color:#09090B}.ph-btn-primary:hover{background:#7AA2FF;color:#09090B}
+.ph-btn-ghost{background:transparent;color:#E4E4E7;border-color:rgba(255,255,255,0.14)}.ph-btn-ghost:hover{color:#FFFFFF;border-color:rgba(255,255,255,0.3)}
+.ph-eyebrow{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8FB0FF}
+.ph-mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.ph-card{background:#111113;border:1px solid rgba(255,255,255,0.08);border-radius:16px}
+.ph-nav a{color:#A1A1AA;font-size:14px;font-weight:500}.ph-nav a:hover{color:#FFFFFF}
+.ph-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.ph-why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ph-notif-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ph-price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ph-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 48px}
+.ph-day-row{display:grid;grid-template-columns:96px minmax(0,1fr) 220px;gap:24px;align-items:start;padding:22px 0;border-top:1px solid rgba(255,255,255,0.08)}
+.ph-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ph-logos{display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:center;align-items:center}
+.ph-toggle button{height:36px;padding:0 16px;border-radius:8px;border:1px solid transparent;background:transparent;color:#A1A1AA;font:600 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ph-toggle button.on{background:#18181B;color:#FFFFFF;border-color:rgba(255,255,255,0.12)}
+.ph-input{height:48px;flex:1 1 240px;min-width:0;padding:0 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:#09090B;color:#FFFFFF;font:400 15px Inter,system-ui,sans-serif}
+.ph-input::placeholder{color:#71717A}
+.ph-footer a{color:#A1A1AA;font-size:14px}.ph-footer a:hover{color:#FFFFFF}
+
+.ph-card.lt{background:#FFFFFF;border-color:#E4E4E7}
+.ph-btn-ghost.lt{color:#18181B;border-color:#D4D4D8}.ph-btn-ghost.lt:hover{color:#09090B;border-color:#18181B}
+.ph-eyebrow.lt{color:#3E74F5}
+.ph-toggle.lt button{color:#52525B}.ph-toggle.lt button.on{background:#18181B;color:#FFFFFF;border-color:#18181B}
+.ph-faq-grid.lt h3{color:#18181B}
+@media (max-width:900px){
+  .ph-hero-grid,.ph-why-grid,.ph-notif-grid,.ph-price-grid,.ph-faq-grid{grid-template-columns:minmax(0,1fr)}
+  .ph-day-row{grid-template-columns:72px minmax(0,1fr)}
+  .ph-day-row .ph-day-status{grid-column:2}
+  .ph-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ph-sec{padding:72px 0}
+  .ph-nav{display:none !important}
+  .ph-h1{font-size:44px !important;line-height:1.08 !important}
+  .ph-h2{font-size:32px !important}
 }
-@media (max-width: 380px){
-  .ph-nav{gap:16px!important;font-size:12.5px!important}
-}
-</style>
-<style>
-/* ---- Mobile layout. The design source ships no media queries. ---- */
-
-/* Below ~900px the hero can't hold two columns; stacking it is what makes the
-   "Pharus operating view" card visible on phones at all. */
-@media (max-width: 900px){
-  .ph-hero-grid{grid-template-columns:1fr!important;gap:44px!important;padding:56px 0 72px!important}
-}
-
-@media (max-width: 700px){
-  .ph-wrap{padding:0 20px!important}
-  .ph-sec{padding:76px 0!important}
-  .ph-hero-grid{gap:32px!important;padding:36px 0 56px!important}
-
-  /* KPI tiles inside the hero card: 4 across is unreadable, 2x2 is fine */
-  .ph-kpi{grid-template-columns:1fr 1fr!important}
-
-  /* Pricing: stack the four tiers, swap column rules for row rules,
-     and drop the min-heights that only exist to align columns. */
-  .ph-price-grid{grid-template-columns:1fr!important}
-  .ph-price-grid>div{border-right:0!important;border-bottom:1px solid #E4E4E7}
-  .ph-price-grid>div:last-child{border-bottom:0}
-  .ph-price-grid>div>div{min-height:0!important}
-
-  /* "Why" cards: remove the asymmetric left padding that read as a stagger,
-     and turn the column dividers into row dividers. */
-  .ph-why-grid>div{padding:30px 0 6px!important;border-right:0!important;border-bottom:1px solid #E4E4E7}
-  .ph-why-grid>div:last-child{border-bottom:0}
-}
+@media (max-width:560px){.ph-hdr-cta{display:none !important}}
 </style>
 <style>
-/* Annual/monthly billing toggle — two radios + label pill, no JavaScript. */
+/* Annual/monthly toggle — two radios + labels, no JavaScript. Radios must stay direct siblings of .ph-price-grid. */
 .ph-bill-in{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.ph-bill{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:38px 0 28px}
-.ph-bill-pill{display:inline-flex;padding:4px;border:1px solid #E4E4E7;border-radius:20px;background:#fff}
-.ph-bill-lbl{cursor:pointer;padding:8px 18px;border-radius:16px;font-size:13.5px;font-weight:600;
-  color:#71717A;user-select:none;transition:background .15s ease,color .15s ease;line-height:1}
+.ph-bill-lbl{cursor:pointer;height:36px;display:inline-flex;align-items:center;padding:0 16px;border-radius:8px;border:1px solid transparent;color:#52525B;font-size:14px;font-weight:600;user-select:none}
 .ph-bill-lbl:hover{color:#18181B}
-#ph-bill-yr:checked~.ph-bill .ph-bill-lbl.ph-bill-yr,
-#ph-bill-mo:checked~.ph-bill .ph-bill-lbl.ph-bill-mo{background:#18181B;color:#fff}
-.ph-bill-note{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.04em;
-  color:#16A34A;transition:opacity .15s ease}
-#ph-bill-mo:checked~.ph-bill .ph-bill-note{opacity:0}
-.ph-bill-in:focus-visible~.ph-bill .ph-bill-pill{outline:2px solid #5A8CFE;outline-offset:2px}
-
-/* price swap */
+#ph-bill-yr:checked~div .ph-bill-lbl.ph-bill-yr,#ph-bill-mo:checked~div .ph-bill-lbl.ph-bill-mo{background:#18181B;color:#FFFFFF;border-color:#18181B}
+#ph-bill-yr:checked~div .ph-bill-lbl.ph-bill-yr span{color:#86EFAC}
 #ph-bill-yr:checked~.ph-price-grid .ph-mo{display:none}
 #ph-bill-mo:checked~.ph-price-grid .ph-yr{display:none}
-
-@media (prefers-reduced-motion:reduce){.ph-bill-lbl,.ph-bill-note{transition:none}}
-@media (max-width:700px){.ph-bill{margin:30px 0 22px;gap:10px}}
+.ph-bill-in:focus-visible~div .ph-toggle{outline:2px solid #5A8CFE;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pharus", "url": "https://pharus.ai/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Inventory management for consumer goods brands. Pharus keeps track of everything that falls off your radar, from the PO you never placed to the bill nobody paid, and brings each one to you ready to approve.", "publisher": {"@type": "Organization", "name": "Pharus Insights Inc.", "url": "https://pharus.ai/"}}</script>
+<!-- Site analytics: add the snippet here before outreach (brief: no analytics on the live site). -->
 </head>
 <body>
-<span id="top" aria-hidden="true"></span>
-<div id="dc-root"><div class="sc-host"><svg width="0" height="0" aria-hidden="true" style="position: absolute;">
+<div style="display:flex;flex-direction:column;min-height:100%">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute;">
   <defs>
     <linearGradient id="pg1" x1="48" y1="28.6" x2="100.2" y2="28.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a8cfe"></stop><stop offset="1" stop-color="#cc72e9" stop-opacity=".7"></stop></linearGradient>
     <linearGradient id="pg2" x1="48" y1="62.7" x2="100.2" y2="62.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#cc72e9" stop-opacity=".7"></stop><stop offset="1" stop-color="#5a8cfe"></stop></linearGradient>
@@ -491,269 +468,392 @@ html{scroll-behavior:smooth}
     <path d="M89.5,84.2c1-.6,2.2-.9,3.6-.9v4.3h-1.1c-1.6,0-2.8.4-3.7,1.2-.8.8-1.3,2.2-1.3,4.3v10.5h-4.1v-20h4.1v2.9c.6-1,1.4-1.8,2.4-2.4Z"></path>
     <path d="M115.4,83.7v20h-4.1v-2.4c-.7.8-1.5,1.5-2.6,1.9-1.1.5-2.2.7-3.4.7s-3-.3-4.2-1c-1.2-.7-2.2-1.6-2.9-2.9-.7-1.3-1.1-2.8-1.1-4.6v-11.7h4.1v11.1c0,1.8.4,3.2,1.3,4.1.9,1,2.1,1.4,3.7,1.4s2.8-.5,3.7-1.4c.9-1,1.4-2.3,1.4-4.1v-11.1h4.1Z"></path>
     <path d="M124.2,103.1c-1.2-.6-2.2-1.3-3-2.3s-1.1-2.1-1.2-3.3h4.3c0,.8.5,1.6,1.2,2.1.7.6,1.7.9,2.8.9s2.1-.2,2.7-.7c.6-.4,1-1,1-1.7s-.4-1.3-1.1-1.7-1.8-.8-3.4-1.2c-1.5-.4-2.7-.8-3.7-1.2-.9-.4-1.8-1-2.4-1.8-.7-.8-1-1.8-1-3.2s.3-2,.9-2.9,1.5-1.6,2.7-2.1c1.2-.5,2.5-.8,4-.8,2.3,0,4.1.6,5.5,1.7,1.4,1.1,2.1,2.7,2.2,4.7h-4.1c0-.9-.4-1.6-1.1-2.1-.7-.5-1.5-.8-2.6-.8s-1.9.2-2.5.6-.9,1-.9,1.6.2,1,.6,1.3.9.6,1.4.9c.6.2,1.4.5,2.5.8,1.5.4,2.6.8,3.6,1.2.9.4,1.7,1,2.4,1.8.7.8,1,1.8,1.1,3.1,0,1.1-.3,2.2-.9,3-.6.9-1.5,1.6-2.7,2.1s-2.5.8-4,.8-3-.3-4.2-.9Z"></path>
-  </g></g></symbol></svg><div style="background: radial-gradient(circle at 85% 8%, rgba(105, 70, 189, 0.3), transparent 36%), radial-gradient(circle at 8% 90%, rgba(90, 140, 254, 0.12), transparent 30%), rgb(9, 9, 11); color: rgb(255, 255, 255); position: relative; overflow: hidden;">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <div class="ph-hdr" style="display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 76px;">
-      <a href="#top" style="display: flex; align-items: center; gap: 9px; color: rgb(255, 255, 255);">
-        <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height: 24px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-icon"></use></svg>
-        <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height: 13px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-word"></use></svg>
-      </a>
-      <nav class="ph-nav" style="display: flex; gap: 26px; font-size: 13.5px;">
-        <a href="#why" class="scp0" style="color: rgba(255, 255, 255, 0.66);">Why</a>
-        <a href="#day" class="scp0" style="color: rgba(255, 255, 255, 0.66);">How it works</a>
-        <a href="#pricing" class="scp0" style="color: rgba(255, 255, 255, 0.66);">Pricing</a>
-      </nav>
-      <div class="ph-hdr-cta" style="display: flex; align-items: center; gap: 16px;">
-        <a href="https://app.pharus.ai" class="scp0" style="font-size: 14px; color: rgba(255, 255, 255, 0.72);">Log in</a>
-        <a href="https://app.pharus.ai/new-organization" class="scp1" style="display: inline-flex; align-items: center; height: 38px; padding: 0px 16px; border-radius: 8px; font-size: 13.5px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255); background: transparent;">Start free trial</a>
-      </div>
+  </g></g></symbol></svg>
+
+<!-- ===================== HEADER ===================== -->
+<header id="top" class="ph-hdr" style="position:sticky;top:0;z-index:10;background:rgba(9,9,11,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="ph-wrap" style="display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px">
+    <a href="#top" aria-label="Pharus home" style="display:flex;align-items:center;gap:9px;color:#FFFFFF">
+      <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height:24px;width:auto;display:block"><use href="#ph-icon"></use></svg>
+      <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height:13px;width:auto;display:block;filter:brightness(0) invert(1)"><use href="#ph-word"></use></svg>
+    </a>
+    <nav class="ph-nav" aria-label="Primary" style="display:flex;gap:28px">
+      <a href="#why">Why</a>
+      <a href="#day">A day with Pharus</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:20px">
+      <a href="https://app.pharus.ai" style="color:#A1A1AA;font-size:14px;font-weight:500">Log in</a>
+      <a class="ph-btn ph-btn-primary ph-hdr-cta" style="height:40px;padding:0 16px;font-size:14px" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
     </div>
+  </div>
+</header>
 
-    <div class="ph-hero-grid" style="display: grid; grid-template-columns: minmax(320px, 560px) minmax(380px, 1fr); gap: 72px; align-items: center; padding: 96px 0px 104px;">
-      <div>
-        <div style="display: inline-flex; align-items: center; gap: 9px; margin-bottom: 26px; padding: 7px 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 999px; background: rgba(255, 255, 255, 0.043); color: rgb(212, 212, 216); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.05em;">Inventory and operations for consumer goods brands</div>
-        <h1 style="margin: 0px; font-size: clamp(44px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.045em; font-weight: 600; max-width: 13ch;">The AI operator that <span style="background: linear-gradient(92deg, rgb(201, 185, 255) 10%, rgb(204, 114, 233) 55%, rgb(119, 160, 255) 100%) text; color: transparent;">runs your back office.</span></h1>
-        <p style="margin: 26px 0px 0px; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.55; color: rgb(161, 161, 170); max-width: 44ch;">Pharus tracks every unit and dollar of inventory across your channels, books the orders, matches the payments, and interrupts you only when a decision needs a human.</p>
-        <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
-          <a href="https://app.pharus.ai/new-organization" class="scp2" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(255, 255, 255); color: rgb(9, 9, 11);">Start your 14-day free trial</a>
-          <a href="#day" class="scp1" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255);">See a day with Pharus →</a>
+<!-- ===================== HERO ===================== -->
+<section style="padding:96px 0 88px;overflow:hidden;position:relative">
+  <div class="ph-wrap">
+    <div class="ph-hero-grid">
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="ph-eyebrow">Inventory management for consumer goods brands</div>
+        <h1 class="ph-h1" style="margin:0;font-size:60px;line-height:1.04;letter-spacing:-0.03em;font-weight:700;color:#FFFFFF">Inventory, <span style="color:#8FB0FF">managed.</span></h1>
+        <p style="margin:0;font-size:19px;line-height:1.55;color:#A1A1AA;max-width:540px">Pharus watches your storefronts, 3PLs, inbox and accounting system and keeps track of everything that falls off your radar: the PO you never placed, the bill nobody paid, the order that will ship short. Each one comes to you ready to approve, so you're not tracking it down yourself.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="ph-btn ph-btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
+          <a class="ph-btn ph-btn-ghost" href="#day">See a day with Pharus →</a>
         </div>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 26px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500;">
-          <span>✓ Live in under 48 hours</span><span>✓ Works directly with Claude &amp; Codex</span><span>✓ Your data stays yours</span>
-        </div>
+        <ul style="list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:#A1A1AA">
+          <li style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.5l3 3 6-6" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up with you, not by you</li>
+          <li style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.5l3 3 6-6" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Lives in your email and Slack</li>
+          <li style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.5l3 3 6-6" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Nothing posts without your approval</li>
+        </ul>
       </div>
 
-      <div>
-        <div style="border: 1px solid rgb(39, 39, 42); border-radius: 16px; background: rgba(20, 20, 22, 0.94); overflow: hidden; box-shadow: rgba(0, 0, 0, 0.95) 0px 50px 120px -30px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px 18px; border-bottom: 1px solid rgb(39, 39, 42); font-size: 12px; font-weight: 600; color: rgb(228, 228, 231);">Pharus operating view <span style="display: flex; align-items: center; gap: 7px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; font-weight: 500;"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(74, 222, 128); box-shadow: rgba(74, 222, 128, 0.1) 0px 0px 0px 4px;"></span>LIVE</span></div>
-          <div style="padding: 16px 18px; border-bottom: 1px solid rgb(39, 39, 42);">
-            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Done today, without you <b style="color: rgb(74, 222, 128); font-weight: 500;">42 tasks</b></div>
-            <div style="display: flex; gap: 7px; flex-wrap: wrap;">
-              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Orders booked</span>
-              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">POs raised</span>
-              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Payments matched</span>
-              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Inventory updated</span>
-              <span style="padding: 7px 9px; border: 1px solid rgb(39, 39, 42); border-radius: 7px; background: rgba(255, 255, 255, 0.035); color: rgb(212, 212, 216); font-size: 10.5px;">Books proposed</span>
-            </div>
+      <!-- Operating view mockup -->
+      <div class="ph-card" aria-label="Pharus operating view" style="padding:22px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 80px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:14px;font-weight:600;color:#FFFFFF">Pharus operating view</div>
+          <div style="display:flex;align-items:center;gap:6px" class="ph-mono"><span style="width:7px;height:7px;border-radius:50%;background:#22C55E;display:inline-block"></span><span style="font-size:11px;letter-spacing:0.08em;color:#22C55E">LIVE</span></div>
+        </div>
+
+        <div style="background:#18181B;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <div style="font-size:13px;color:#A1A1AA">Ready for your approval</div>
+            <div class="ph-mono" style="font-size:13px;color:#FFFFFF;font-weight:600">42 items</div>
           </div>
-          <div style="padding: 16px 18px; border-bottom: 1px solid rgb(39, 39, 42);">
-            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Month to date</div>
-            <div class="ph-kpi" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
-              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">Revenue</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">$2.90M</b></div>
-              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">COGS</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">−$1.64M</b></div>
-              <div style="padding: 10px; border: 1px solid rgb(39, 39, 42); border-radius: 8px; background: rgba(255, 255, 255, 0.024);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">OpEx + S&amp;M</span><b style="display: block; margin-top: 4px; color: rgb(244, 244, 245); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">−$840K</b></div>
-              <div style="padding: 10px; border: 1px solid rgba(74, 222, 128, 0.24); border-radius: 8px; background: rgba(74, 222, 128, 0.05);"><span style="display: block; color: rgb(113, 113, 122); font-size: 9.5px;">Contribution</span><b style="display: block; margin-top: 4px; color: rgb(74, 222, 128); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 500;">$420K</b></div>
-            </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;color:#E4E4E7;background:#09090B;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:5px 10px">Orders drafted</span>
+            <span style="font-size:12px;color:#E4E4E7;background:#09090B;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:5px 10px">POs proposed</span>
+            <span style="font-size:12px;color:#E4E4E7;background:#09090B;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:5px 10px">Payments matched</span>
+            <span style="font-size:12px;color:#E4E4E7;background:#09090B;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:5px 10px">Counts reconciled</span>
+            <span style="font-size:12px;color:#E4E4E7;background:#09090B;border:1px solid rgba(255,255,255,0.08);border-radius:999px;padding:5px 10px">Entries proposed</span>
           </div>
-          <div style="padding: 16px 18px;">
-            <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: rgb(113, 113, 122); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Needs your judgment <b style="color: rgb(196, 181, 253); font-weight: 500;">2 decisions</b></div>
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <div style="min-width: 0px;"><b style="display: block; color: rgb(228, 228, 231); font-size: 11.5px; font-weight: 500;">Move 120 units to Amazon?</b><span style="display: block; margin-top: 2px; color: rgb(113, 113, 122); font-size: 10px;">Demand is 2.4× higher there this week</span></div>
-              <em style="flex: 0 0 auto; padding: 5px 7px; border-radius: 6px; background: rgba(167, 139, 250, 0.1); color: rgb(196, 181, 253); font-style: normal; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 500;">REVIEW</em>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0px 0px;">
-              <div style="min-width: 0px;"><b style="display: block; color: rgb(228, 228, 231); font-size: 11.5px; font-weight: 500;">Hold spend on SKU 2140?</b><span style="display: block; margin-top: 2px; color: rgb(113, 113, 122); font-size: 10px;">11 days of stock · replenishment in 19</span></div>
-              <em style="flex: 0 0 auto; padding: 5px 7px; border-radius: 6px; background: rgba(167, 139, 250, 0.1); color: rgb(196, 181, 253); font-style: normal; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; font-weight: 500;">REVIEW</em>
-            </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:13px;color:#A1A1AA">Month to date</div>
+          <div class="ph-kpi">
+            <div style="background:#18181B;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><div style="font-size:11px;color:#A1A1AA">Revenue</div><div class="ph-mono" style="font-size:18px;font-weight:600;color:#FFFFFF">$310K</div></div>
+            <div style="background:#18181B;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><div style="font-size:11px;color:#A1A1AA">COGS</div><div class="ph-mono" style="font-size:18px;font-weight:600;color:#FFFFFF">−$175K</div></div>
+            <div style="background:#18181B;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><div style="font-size:11px;color:#A1A1AA">OpEx + S&amp;M</div><div class="ph-mono" style="font-size:18px;font-weight:600;color:#FFFFFF">−$92K</div></div>
+            <div style="background:#18181B;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><div style="font-size:11px;color:#A1A1AA">Contribution</div><div class="ph-mono" style="font-size:18px;font-weight:600;color:#4ADE80">$43K</div></div>
+          </div>
+        </div>
+
+        <div style="background:#18181B;border:1px solid rgba(90,140,254,0.35);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <div style="font-size:13px;font-weight:600;color:#FFFFFF">Needs a real decision</div>
+            <div class="ph-mono" style="font-size:12px;color:#8FB0FF">2 decisions</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;background:#09090B;border-radius:10px">
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0"><div style="font-size:13px;color:#FFFFFF;font-weight:500">Move 120 units to Amazon?</div><div style="font-size:12px;color:#A1A1AA">Demand is 2.4× higher there this week</div></div>
+            <span class="ph-mono" style="font-size:11px;letter-spacing:0.06em;color:#09090B;background:#5A8CFE;border-radius:6px;padding:5px 9px;font-weight:600">REVIEW</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;background:#09090B;border-radius:10px">
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0"><div style="font-size:13px;color:#FFFFFF;font-weight:500">Hold spend on SKU 2140?</div><div style="font-size:12px;color:#A1A1AA">11 days of stock · replenishment in 19</div></div>
+            <span class="ph-mono" style="font-size:11px;letter-spacing:0.06em;color:#09090B;background:#5A8CFE;border-radius:6px;padding:5px 9px;font-weight:600">REVIEW</span>
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  
-    <div style="border-top: 1px solid rgb(39, 39, 42); padding: 24px 0px; overflow: hidden;">
-      <div aria-hidden="true" style="display: flex; gap: 52px; white-space: nowrap; width: max-content; animation: 34s linear 0s infinite normal none running mq;">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Shopify</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Amazon</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">TikTok Shop</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Meta Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Google Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">3PLs</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">EDI</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">QuickBooks</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Gmail</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Shopify</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Amazon</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">TikTok Shop</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Meta Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Google Ads</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">3PLs</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">EDI</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">QuickBooks</span><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: rgb(82, 82, 91);">Gmail</span>
-      </div>
+<!-- ===================== INTEGRATIONS STRIP ===================== -->
+<section style="padding:28px 0 36px;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:18px;align-items:center">
+    <div class="ph-eyebrow" style="color:#71717A">Works where your business already runs</div>
+    <div class="ph-logos ph-mono" style="font-size:13px;color:#A1A1AA;font-weight:500">
+      <span>Shopify</span><span>Amazon</span><span>TikTok Shop</span><span>Meta Ads</span><span>Google Ads</span><span>3PLs</span><span>EDI</span><span>QuickBooks</span><span>Xero</span><span>NetSuite</span><span>Gmail</span><span>Slack</span>
     </div>
-  </div><section class="ph-sec" id="why" style="padding: 140px 0px; background: rgb(255, 255, 255);">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600; max-width: 20ch;">An ops manager costs $120K a year. So you're still doing it yourself at 9pm.</h2>
-    <p style="margin: 18px 0px 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">Pharus isn't another dashboard to check. It's the hire you couldn't make. It does the operations work and reports back.</p>
+  </div>
+</section>
 
-    <div class="ph-why-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0px; border-top: 1px solid rgb(228, 228, 231); margin-top: 64px;">
-      <div style="padding: 36px 32px 0px 0px; border-right: 1px solid rgb(228, 228, 231);">
-        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">01</span>
-        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">It does the work</h3>
-        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">A PO lands in your inbox; the sales order is already booked. Invoices post, payments match, month-end closes, all before you've asked.</p>
-      </div>
-      <div style="padding: 36px 32px 0px; border-right: 1px solid rgb(228, 228, 231);">
-        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">02</span>
-        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">Only what needs you</h3>
-        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">Exceptions come to you with a recommendation and the evidence attached. You see six things, not sixty tabs. Silence means it's handled.</p>
-      </div>
-      <div style="padding: 36px 0px 0px 32px;">
-        <span style="display: block; margin-bottom: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: rgb(161, 161, 170);">03</span>
-        <h3 style="margin: 0px 0px 10px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em;">Every number ties out</h3>
-        <p style="margin: 0px 0px 36px; font-size: 14.5px; color: rgb(113, 113, 122); max-width: 32ch;">A real inventory and costing ledger sits under the AI. Penny-accurate, with the receipt behind every figure one click away.</p>
-      </div>
-    </div>
-  </div></section><section class="ph-sec" id="day" style="padding: 140px 0px; background: rgb(9, 9, 11); color: rgb(255, 255, 255);">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
-      <div>
-        <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600;">An ordinary Tuesday, handled.</h2>
-      </div>
-      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(161, 161, 170); max-width: 52ch;">Nobody asked Pharus to do any of this. That's the point.</p>
+<!-- ===================== WHY ===================== -->
+<section id="why" class="ph-sec" style="scroll-margin-top:68px;background:#FFFFFF;color:#18181B">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:760px">
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#18181B">You sold it. Did you have it?</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#52525B">Most back-office disasters start with a good sales day. Pharus keeps one ledger of what you have, what's committed and what's on the way, and checks every order and plan against it the moment it lands.</p>
     </div>
 
-    <div style="border-top: 1px solid rgb(39, 39, 42);">
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">6:12am</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Booked three sales orders from the inbox</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">$61,204.19 ready</span>
+    <div class="ph-why-grid">
+      <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+        <div class="ph-mono" style="font-size:12px;color:#3E74F5">01</div>
+        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The $5,000 air-freight bill</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A production run came up short on pouches nobody reordered. Fix: $5,000 in air freight. Pharus watches materials against the production calendar and drafts the PO at the vendor's lead time.</p>
       </div>
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">8:40am</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Caught two orders claiming the same stock</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(240, 183, 94); white-space: nowrap;">needs your call</span>
+      <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+        <div class="ph-mono" style="font-size:12px;color:#3E74F5">02</div>
+        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The campaign with no stock behind it</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A brand built its biggest Black Friday campaign on inventory that wasn't landing in time. Pharus checks plans and ad spend against replenishment dates and flags the gap before the spend goes out.</p>
       </div>
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">11:05am</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Raised a PO for packaging before it ran out</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(113, 113, 122); white-space: nowrap;">$18,940.00 order</span>
-      </div>
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">1:30pm</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Flagged an ad campaign heading for a stockout</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(240, 183, 94); white-space: nowrap;">needs your call</span>
-      </div>
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">4:55pm</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Disputed a customer deduction, proof attached</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">$2,140.00 challenged</span>
-      </div>
-      <div class="ph-day-row" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 28px; align-items: baseline; padding: 24px 0px; border-bottom: 1px solid rgb(39, 39, 42);">
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(82, 82, 91);">9:00pm</span>
-        <span style="font-size: clamp(17px, 1.9vw, 24px); letter-spacing: -0.02em; font-weight: 500;">Proposed the day's journal entries</span>
-        <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 222, 128); white-space: nowrap;">everything ties out</span>
+      <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+        <div class="ph-mono" style="font-size:12px;color:#3E74F5">03</div>
+        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The order that ships short</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A PO lands. Pharus checks it against on-hand, committed and inbound before drafting the order, and flags the shortfall the morning it arrives, not the week it ships.</p>
       </div>
     </div>
 
-    <p style="margin: 44px 0px 0px; font-size: clamp(18px, 2vw, 26px); letter-spacing: -0.02em; font-weight: 500;">Two decisions needed you. <span style="color: rgb(82, 82, 91);">The rest was already done.</span></p>
-  </div></section><section class="ph-sec" id="pricing" style="padding: 140px 0px; background: rgb(250, 250, 250); border-top: 1px solid rgb(228, 228, 231);">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px;">
-      <div>
-        <h2 style="margin: 0px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600;">Pay for the work you hand over.</h2>
+    <!-- Three notifications -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div class="ph-eyebrow lt">What it sounds like in your Slack</div>
+      <div class="ph-notif-grid">
+        <div class="ph-card lt" style="padding:20px;display:flex;flex-direction:column;gap:12px;background:#FFFFFF">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:28px;height:28px;border-radius:7px;background:#09090B;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 90.5 57" aria-hidden="true" style="height:12px;width:auto;display:block"><use href="#ph-icon"></use></svg></span>
+            <span style="font-size:14px;font-weight:600;color:#18181B">Pharus</span>
+            <span class="ph-mono" style="font-size:12px;color:#6B6B73">7:02 AM</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#27272A">Order #4471 is short 48 cases in NJ. Split it: 120 from NJ today, 48 from Reno tomorrow. Approve?</p>
+          <div class="ph-mono" style="font-size:12px;color:#16A34A">No action needed</div>
+        </div>
+        <div class="ph-card lt" style="padding:20px;display:flex;flex-direction:column;gap:12px;background:#FFFFFF">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:28px;height:28px;border-radius:7px;background:#09090B;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 90.5 57" aria-hidden="true" style="height:12px;width:auto;display:block"><use href="#ph-icon"></use></svg></span>
+            <span style="font-size:14px;font-weight:600;color:#18181B">Pharus</span>
+            <span class="ph-mono" style="font-size:12px;color:#6B6B73">9:15 AM</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#27272A">Hot Honey pouches stock out before the next run. PO drafted: 2,000 units, due Nov 12. Approve?</p>
+          <div style="display:flex;gap:8px">
+            <span style="font-size:13px;font-weight:600;color:#09090B;background:#5A8CFE;border-radius:7px;padding:6px 12px">Approve</span>
+            <span style="font-size:13px;font-weight:600;color:#27272A;border:1px solid #D4D4D8;border-radius:7px;padding:6px 12px">Change</span>
+          </div>
+        </div>
+        <div class="ph-card lt" style="padding:20px;display:flex;flex-direction:column;gap:12px;background:#FFFFFF">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:28px;height:28px;border-radius:7px;background:#09090B;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 90.5 57" aria-hidden="true" style="height:12px;width:auto;display:block"><use href="#ph-icon"></use></svg></span>
+            <span style="font-size:14px;font-weight:600;color:#18181B">Pharus</span>
+            <span class="ph-mono" style="font-size:12px;color:#6B6B73">11:40 AM</span>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#27272A">3PL counts 310 cases of Original; we show 340. The Oct 14 transfer was never received. Adjustment drafted.</p>
+          <div style="display:flex;gap:8px">
+            <span style="font-size:13px;font-weight:600;color:#09090B;background:#5A8CFE;border-radius:7px;padding:6px 12px">Post it</span>
+            <span class="ph-mono" style="font-size:12px;color:#6B6B73;align-self:center">one click</span>
+          </div>
+        </div>
       </div>
-      <p style="margin: 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; color: rgb(113, 113, 122); max-width: 56ch;">One ladder: each tier hands Pharus more of the operation. Every tier starts with a 14-day free trial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== A DAY WITH PHARUS ===================== -->
+<section id="day" class="ph-sec" style="scroll-margin-top:68px;background:#0E0E11;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <div class="ph-eyebrow">A day with Pharus</div>
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#FFFFFF">An ordinary Tuesday, handled.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#A1A1AA">Every item arrived ready to approve.</p>
     </div>
 
-    <input type="radio" name="ph-bill" id="ph-bill-yr" class="ph-bill-in" checked>
-<input type="radio" name="ph-bill" id="ph-bill-mo" class="ph-bill-in">
-<div class="ph-bill" role="group" aria-label="Billing period">
-  <span class="ph-bill-pill">
-    <label for="ph-bill-yr" class="ph-bill-lbl ph-bill-yr">Annual</label>
-    <label for="ph-bill-mo" class="ph-bill-lbl ph-bill-mo">Monthly</label>
-  </span>
-  <span class="ph-bill-note">Save up to 33%</span>
+    <div style="display:flex;flex-direction:column;border-bottom:1px solid rgba(255,255,255,0.08)">
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">6:12 AM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Drafted three sales orders from the inbox</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Three customer POs overnight. Item numbers matched, stock checked, drafted against the right warehouse.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$61,204.19 · one tap to book</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">8:40 AM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Caught two orders claiming the same stock</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">96 cases committed twice. Both held, ship order set by delivery date, note to the second customer drafted.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#FBBF24">needs your call</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">11:05 AM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Drafted a PO for packaging before it ran out</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Film stock would run out before the next production run. PO drafted at the vendor's last price.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$18,940.00 · one tap to send</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">1:30 PM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Flagged an ad campaign heading for a stockout</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">A Meta campaign was selling through faster than replenishment. Recommended a nine-day pause, math attached.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#FBBF24">needs your call</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">4:55 PM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Prepared a deduction dispute, proof attached</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Shortage claim on a remittance. Signed BOL pulled, dispute written.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$2,140.00 · one tap to file</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">9:00 PM</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Proposed the day's journal entries</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Inventory, COGS and deductions drafted for your general ledger. Every line traces to a receipt.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">everything ties out · approve to post</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.01em">Two needed a real decision.</div>
+      <div style="font-size:22px;font-weight:600;color:#71717A;letter-spacing:-0.01em">The rest took one tap each.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="ph-sec" style="scroll-margin-top:68px;background:#FAFAFA;color:#18181B">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:40px">
+    <input class="ph-bill-in" type="radio" name="ph-bill" id="ph-bill-yr" checked>
+    <input class="ph-bill-in" type="radio" name="ph-bill" id="ph-bill-mo">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+        <div class="ph-eyebrow lt">Pricing</div>
+        <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#18181B">Priced by how your business works.</h2>
+        <p style="margin:0;font-size:18px;line-height:1.55;color:#52525B">Not by orders, users or revenue. Only by what Pharus connects to.</p>
+      </div>
+      <div class="ph-toggle lt" role="group" aria-label="Billing period" style="display:flex;align-items:center;gap:4px;padding:4px;border:1px solid #E4E4E7;border-radius:10px;background:#FFFFFF">
+        <label class="ph-bill-lbl ph-bill-yr" for="ph-bill-yr">Annual <span style="color:#16A34A;font-weight:600">· save 25%</span></label>
+        <label class="ph-bill-lbl ph-bill-mo" for="ph-bill-mo">Monthly</label>
+      </div>
+    </div>
+
+    <div class="ph-price-grid">
+      <!-- Standard -->
+      <div class="ph-card lt" style="padding:32px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div class="ph-mono" style="font-size:12px;color:#3E74F5;letter-spacing:0.06em">STANDARD</div>
+          <div style="font-size:15px;color:#52525B">You buy finished goods and sell them.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:baseline;gap:6px"><span class="ph-mono" style="font-size:44px;font-weight:600;color:#18181B;letter-spacing:-0.02em"><span class="ph-yr">$299</span><span class="ph-mo">$399</span></span><span style="font-size:15px;color:#52525B">/mo</span></div>
+          <div style="font-size:13px;color:#6B6B73"><span class="ph-yr">$3,590 billed annually</span><span class="ph-mo">billed monthly</span></div>
+        </div>
+        <div style="font-size:16px;font-weight:600;color:#18181B;line-height:1.45">Runs purchasing, your storefronts and your 3PL.</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15px;color:#27272A">
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Purchase orders and products</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>E-commerce connectors</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>One external 3PL location</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Insights, and Pharus from Claude or ChatGPT</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Hands-on onboarding with our founding team</li>
+        </ul>
+        <a class="ph-btn ph-btn-ghost lt" style="margin-top:auto" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="ph-card lt" style="padding:32px;display:flex;flex-direction:column;gap:22px;border-color:rgba(90,140,254,0.5);position:relative">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><div class="ph-mono" style="font-size:12px;color:#3E74F5;letter-spacing:0.06em">PRO</div><span class="ph-mono" style="font-size:11px;color:#09090B;background:#5A8CFE;border-radius:6px;padding:4px 8px;font-weight:600">MOST BRANDS</span></div>
+          <div style="font-size:15px;color:#52525B">You make or convert product.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:baseline;gap:6px"><span class="ph-mono" style="font-size:44px;font-weight:600;color:#18181B;letter-spacing:-0.02em"><span class="ph-yr">$899</span><span class="ph-mo">$1,199</span></span><span style="font-size:15px;color:#52525B">/mo</span></div>
+          <div style="font-size:13px;color:#6B6B73"><span class="ph-yr">$10,790 billed annually</span><span class="ph-mo">billed monthly</span></div>
+        </div>
+        <div style="font-size:16px;font-weight:600;color:#18181B;line-height:1.45">Runs production, materials and every location.</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15px;color:#27272A">
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Everything in Standard</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Materials and conversions</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Production and work orders</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Multiple locations and sources</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Hands-on onboarding with our founding team</li>
+        </ul>
+        <a class="ph-btn ph-btn-primary" style="margin-top:auto" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
+      </div>
+
+      <!-- Custom -->
+      <div class="ph-card lt" style="padding:32px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div class="ph-mono" style="font-size:12px;color:#3E74F5;letter-spacing:0.06em">CUSTOM</div>
+          <div style="font-size:15px;color:#52525B">Wholesale, EDI, custom connectors and workflows.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:baseline;gap:6px"><span class="ph-mono" style="font-size:44px;font-weight:600;color:#18181B;letter-spacing:-0.02em">Let's talk</span></div>
+          <div style="font-size:13px;color:#6B6B73">annual agreement</div>
+        </div>
+        <div style="font-size:16px;font-weight:600;color:#18181B;line-height:1.45">Runs wholesale, EDI, cash application and the close with you.</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15px;color:#27272A">
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Everything in Pro</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>EDI and custom connectors</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Custom workflows built for your trading partners</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Accounting write-back and remittance automation</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Migration and month-end close support</li>
+        </ul>
+        <a class="ph-btn ph-btn-ghost lt" style="margin-top:auto" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
+      </div>
+    </div>
+
+    <p style="margin:0;font-size:15px;color:#6B6B73;text-align:center">Every account starts with a 30-minute working session on your real data. The free trial follows that call.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="ph-sec" style="scroll-margin-top:68px;border-top:1px solid #E4E4E7;border-bottom:1px solid #E4E4E7;background:#FFFFFF;color:#18181B">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <div class="ph-eyebrow lt">Before you hand anything over</div>
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#18181B">Fair questions.</h2>
+    </div>
+    <div class="ph-faq-grid">
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Is this another system I have to manage?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">No. It works with the tools you already use. You approve its work from email or Slack.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Will it do anything without asking me?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">No. Pharus drafts; you approve. Every order, PO, payment match and journal entry waits for your tap, with the source document attached. If you later want routine items to post on their own, that's a setting you turn on.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Does it need access to my email?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Only the folders and senders you choose. It reads POs, invoices and remittances. It never sends email as you.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">How long does setup take?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Usually within your first week. We set it up with you from your real data and stay through the first live orders.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Does it work with my 3PL?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">By API, EDI or their daily reports. Tell us who you use and we'll confirm what's live. [LIST LIVE 3PL CONNECTORS]</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Can I use it from Claude or ChatGPT?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Yes. Pharus works directly with Claude and Codex: ask about stock, orders or margins and post work back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLOSING CTA ===================== -->
+<section class="ph-sec">
+  <div class="ph-wrap">
+    <div class="ph-card" style="padding:64px 48px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;background:radial-gradient(circle at 50% 0px,rgba(105,70,189,0.38),transparent 55%),#0E0E11">
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#FFFFFF;max-width:700px">Stop doing the back office yourself.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#A1A1AA;max-width:620px">Bring one customer PO and one vendor invoice to a 30-minute session and watch Pharus work them up for your approval.</p>
+      <a class="ph-btn ph-btn-primary" style="height:52px;padding:0 28px;font-size:16px" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REFERRAL ===================== -->
+<section style="padding:0 0 96px">
+  <div class="ph-wrap">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 48px;padding:32px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1 1 380px;min-width:0">
+        <div style="font-size:18px;font-weight:600;color:#FFFFFF">Know a founder drowning in spreadsheets?</div>
+        <div style="font-size:15px;line-height:1.55;color:#A1A1AA">Introduce us by email: $100 off your next invoice, and a month's credit when they sign.</div>
+      </div>
+      <form action="mailto:marshall@pharus.ai" method="get" style="display:flex;flex-wrap:wrap;gap:10px;flex:1 1 360px;min-width:0;margin:0">
+        <label for="ph-ref-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your email</label>
+        <input id="ph-ref-email" class="ph-input" type="email" name="subject" placeholder="Your email">
+        <button type="submit" class="ph-btn ph-btn-ghost">Introduce a founder</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ph-footer" style="padding:40px 0 48px;border-top:1px solid rgba(255,255,255,0.08)">
+  <div class="ph-wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 48px">
+    <div style="display:flex;flex-direction:column;gap:10px;flex:1 1 320px">
+      <div style="display:flex;align-items:center;gap:9px;color:#FFFFFF">
+        <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height:22px;width:auto;display:block"><use href="#ph-icon"></use></svg>
+        <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height:12px;width:auto;display:block;filter:brightness(0) invert(1)"><use href="#ph-word"></use></svg>
+      </div>
+      <div style="font-size:14px;color:#71717A;max-width:360px;line-height:1.5">Inventory management for consumer goods brands.</div>
+    </div>
+    <nav aria-label="Footer" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
+      <a href="#why">Why</a><a href="#day">A day with Pharus</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="mailto:marshall@pharus.ai">Contact</a><a href="https://app.pharus.ai">Log in</a>
+    </nav>
+    <div class="ph-mono" style="flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12px;color:#71717A;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)">
+      <span>© 2026 Pharus Insights Inc.</span><span>pharus.ai</span>
+    </div>
+  </div>
+</footer>
+
 </div>
-<div class="ph-price-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 0px; border: 1px solid rgb(228, 228, 231); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255);">
-      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
-        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">01 · Foundation</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$199</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$299</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 33%</span><span class="ph-mo">billed monthly</span></div>
-        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">See real margins on one storefront.</div>
-        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Shopify inventory and sales</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Meta, Google, and TikTok ad spend</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Contribution margin by SKU</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>One clean inventory picture</li>
-        </ul>
-        <a href="https://app.pharus.ai/new-organization" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Start 14-day trial</a>
-      </div>
-      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column; background: linear-gradient(rgb(247, 244, 255) 0%, rgb(255, 255, 255) 72%); box-shadow: rgb(105, 70, 189) 0px 3px 0px inset;">
-        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">02 · Multichannel</span><span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; height: 21px; padding: 0px 9px; border-radius: 20px; background: rgb(24, 24, 27); color: rgb(255, 255, 255);">Most start here</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$999</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,200</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 17%</span><span class="ph-mo">billed monthly</span></div>
-        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">One inventory picture across every channel.</div>
-        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Foundation, plus</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Amazon and TikTok Shop</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>One 3PL or warehouse</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Sales orders, in seconds not spreadsheets</li>
-        </ul>
-        <a href="https://app.pharus.ai/new-organization" class="scp4" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(90, 140, 254); color: rgb(255, 255, 255);">Start 14-day trial</a>
-      </div>
-      <div style="padding: 34px 30px 32px; border-right: 1px solid rgb(228, 228, 231); display: flex; flex-direction: column;">
-        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">03 · Wholesale</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span class="ph-yr" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$1,999</span><span class="ph-mo" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 40px; font-weight: 500; letter-spacing: -0.05em;">$2,500</span><span style="font-size: 13px; color: rgb(161, 161, 170);">/mo</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;"><span class="ph-yr">billed annually · save 20%</span><span class="ph-mo">billed monthly</span></div>
-        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">Wholesale orders to cash, without the chase.</div>
-        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Multichannel, plus</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>EDI and inbox POs book themselves</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Remittances matched to invoices</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Deductions flagged with proof attached</li>
-        </ul>
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU" target="_blank" rel="noopener" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Talk to us</a>
-      </div>
-      <div style="padding: 34px 30px 32px; display: flex; flex-direction: column;">
-        <div style="display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px; min-height: 54px; line-height: 21px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">04 · Full operator</span></div>
-        <div style="display: flex; align-items: baseline; gap: 5px; margin: 20px 0px 6px; min-height: 64px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.035em; line-height: 40px;">Custom</span></div>
-        <div style="font-size: 12px; color: rgb(161, 161, 170); font-family: &quot;JetBrains Mono&quot;, monospace; min-height: 36px; line-height: 18px;">annual agreement</div>
-        <div style="margin: 22px 0px; font-size: 15px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.4; min-height: 63px; padding-bottom: 22px; border-bottom: 1px solid rgb(228, 228, 231);">Your back office, staffed by us.</div>
-        <ul style="list-style: none; margin: 0px 0px 32px; padding: 0px; display: flex; flex-direction: column;">
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(24, 24, 27); font-weight: 500; padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(24, 24, 27);"></span>Everything in Wholesale, plus</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Fractional CFO and COO on your account</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Month-end close and collections done for you</li>
-          <li style="font-size: 13.5px; line-height: 1.45; color: rgb(113, 113, 122); padding: 5px 0px 5px 16px; position: relative;"><span style="position: absolute; left: 0px; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: rgb(228, 228, 231);"></span>Multiple entities, unlimited trading partners</li>
-        </ul>
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU" target="_blank" rel="noopener" class="scp3" style="margin-top: auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgb(228, 228, 231); color: rgb(63, 63, 70); background: rgb(255, 255, 255);">Talk to us</a>
-      </div>
-    </div>
-    <p style="margin: 20px 0px 0px; text-align: center; font-size: 13px; color: rgb(113, 113, 122);">Start where you are today. Move up when the operation calls for it.</p>
-  </div></section><section class="ph-sec" id="faq" style="padding: 140px 0px; background: rgb(255, 255, 255);">
-  <div class="ph-wrap" style="max-width: 800px; margin: 0px auto; padding: 0px 32px;">
-    <h2 style="margin: 0px 0px 36px; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 600;">Before you hand anything over.</h2>
-    <details open="" style="border-bottom: 1px solid rgb(228, 228, 231);">
-      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">Is this another system my team has to manage?</summary>
-      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">No. Pharus works with the tools you already use, including directly with Claude and Codex, and does the routine work itself. You review its work; you don't feed it forms.</p>
-    </details>
-    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
-      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">What happens when Pharus isn't sure?</summary>
-      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">It asks one precise question with a recommended default and the original document attached. It never silently guesses on money, and you choose which actions always require review.</p>
-    </details>
-    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
-      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">What can Pharus see in my email?</summary>
-      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">Only the folders and senders you choose. It reads POs, invoices, and remittances into work. It never sends email as you, and you can remove access at any time.</p>
-    </details>
-    <details style="border-bottom: 1px solid rgb(228, 228, 231);">
-      <summary style="cursor: pointer; padding: 24px 0px; font-size: 17px; font-weight: 500; letter-spacing: -0.015em;">How long does setup take?</summary>
-      <p style="margin: 0px; font-size: 14.5px; color: rgb(113, 113, 122); padding: 0px 0px 26px; max-width: 62ch;">Under 48 hours for most brands. Connect your tools, and Pharus builds your inventory and order picture from your real data. We stay with you through the first live orders at every tier.</p>
-    </details>
-  </div></section><section class="ph-sec" style="padding: 140px 0px; background: radial-gradient(circle at 50% 0px, rgba(105, 70, 189, 0.38), transparent 48%), rgb(9, 9, 11); color: rgb(255, 255, 255); text-align: center;">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <h2 style="margin: 0px auto; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 600; max-width: 16ch;">Hand the back office to Pharus.</h2>
-    <p style="margin: 24px auto 0px; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.5; color: rgb(161, 161, 170); max-width: 46ch;">Start a free trial, or bring one customer PO and one vendor invoice to a 30-minute session and watch Pharus handle your real workflow.</p>
-    <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 38px;">
-      <a href="https://app.pharus.ai/new-organization" class="scp2" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: rgb(255, 255, 255); color: rgb(9, 9, 11); box-shadow: rgba(255, 255, 255, 0.12) 0px 14px 40px;">Start your 14-day free trial</a>
-      <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU" target="_blank" rel="noopener" class="scp1" style="display: inline-flex; align-items: center; height: 46px; padding: 0px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.22); color: rgb(255, 255, 255);">Book a working session</a>
-    </div>
-  </div></section><footer style="background: rgb(9, 9, 11); color: rgb(113, 113, 122); padding: 64px 0px 40px; font-size: 13.5px; border-top: 1px solid rgb(39, 39, 42);">
-  <div class="ph-wrap" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
-    <div style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
-      <div>
-        <a href="#top" style="display: flex; align-items: center; gap: 9px;">
-          <svg viewBox="0 0 90.5 57" role="img" aria-label="Pharus" style="height: 24px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-icon"></use></svg>
-          <svg viewBox="0 0 124.6 27.8" aria-hidden="true" style="height: 13px; width: auto; display: block; filter: brightness(0) invert(1);"><use href="#ph-word"></use></svg>
-        </a>
-        <p style="color: rgb(82, 82, 91); max-width: 40ch; margin: 16px 0px 0px; font-size: 13px; line-height: 1.65;">The AI operator that runs inventory and the back office for consumer goods brands.</p>
-      </div>
-      <div style="display: flex; gap: 28px; flex-wrap: wrap;">
-        <a href="#why" class="scp0" style="color: rgb(113, 113, 122);">Why</a>
-        <a href="#day" class="scp0" style="color: rgb(113, 113, 122);">How it works</a>
-        <a href="#pricing" class="scp0" style="color: rgb(113, 113, 122);">Pricing</a>
-        <a href="mailto:marshall@pharus.ai" class="scp0" style="color: rgb(113, 113, 122);">Contact</a>
-        <a href="https://app.pharus.ai" class="scp0" style="color: rgb(113, 113, 122);">Log in</a>
-      </div>
-    </div>
-    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgb(39, 39, 42); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: rgb(63, 63, 70);">
-      <span>© 2026 Pharus Insights, Inc.</span><span>pharus.ai</span>
-    </div>
-  </div></footer></div></div>
-
 </body></html>
