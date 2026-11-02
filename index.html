@@ -416,7 +416,7 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
 .ph-toggle.lt button{color:#52525B}.ph-toggle.lt button.on{background:#18181B;color:#FFFFFF;border-color:#18181B}
 .ph-faq-grid.lt h3{color:#18181B}
 @media (max-width:900px){
-  .ph-hero-grid,.ph-why-grid,.ph-notif-grid,.ph-price-grid,.ph-faq-grid{grid-template-columns:minmax(0,1fr)}
+  .ph-hero-grid,.ph-why-grid,.ph-notif-grid,.ph-price-grid,.ph-faq-grid{grid-template-columns:minmax(0,1fr) !important}
   .ph-day-row{grid-template-columns:72px minmax(0,1fr)}
   .ph-day-row .ph-day-status{grid-column:2}
   .ph-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -479,7 +479,7 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
     </a>
     <nav class="ph-nav" aria-label="Primary" style="display:flex;gap:28px">
       <a href="#why">Why</a>
-      <a href="#day">A day with Pharus</a>
+      <a href="#day">Week in the Life</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -500,7 +500,7 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
         <p style="margin:0;font-size:19px;line-height:1.55;color:#A1A1AA;max-width:540px">Pharus watches your storefronts, 3PLs, inbox and accounting system and keeps track of everything that falls off your radar: the PO you never placed, the bill nobody paid, the order that will ship short. Each one comes to you ready to approve, so you're not tracking it down yourself.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <a class="ph-btn ph-btn-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
-          <a class="ph-btn ph-btn-ghost" href="#day">See a day with Pharus →</a>
+          <a class="ph-btn ph-btn-ghost" href="#day">See a week in the life →</a>
         </div>
         <ul style="list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:#A1A1AA">
           <li style="display:flex;align-items:center;gap:8px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7.5l3 3 6-6" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Set up with you, not by you</li>
@@ -564,34 +564,47 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
   <div class="ph-wrap" style="display:flex;flex-direction:column;gap:18px;align-items:center">
     <div class="ph-eyebrow" style="color:#71717A">Works where your business already runs</div>
     <div class="ph-logos ph-mono" style="font-size:13px;color:#A1A1AA;font-weight:500">
-      <span>Shopify</span><span>Amazon</span><span>TikTok Shop</span><span>Meta Ads</span><span>Google Ads</span><span>3PLs</span><span>EDI</span><span>QuickBooks</span><span>Xero</span><span>NetSuite</span><span>Gmail</span><span>Slack</span>
+      <span>Shopify</span><span>Amazon</span><span>TikTok Shop</span><span>Meta Ads</span><span>Google Ads</span><span>3PLs</span><span>EDI</span><span>QuickBooks</span><span>Gmail</span><span>Slack</span>
     </div>
   </div>
 </section>
 
 <!-- ===================== WHY ===================== -->
 <section id="why" class="ph-sec" style="scroll-margin-top:68px;background:#FFFFFF;color:#18181B">
-  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:56px">
+  <div class="ph-wrap" style="display:flex;flex-direction:column;gap:48px">
     <div style="display:flex;flex-direction:column;gap:18px;max-width:760px">
-      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#18181B">You sold it. Did you have it?</h2>
-      <p style="margin:0;font-size:18px;line-height:1.55;color:#52525B">Most back-office disasters start with a good sales day. Pharus keeps one ledger of what you have, what's committed and what's on the way, and checks every order and plan against it the moment it lands.</p>
+      <div class="ph-eyebrow lt">Has this happened to you?</div>
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#18181B">Five things that stop happening.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#52525B">Pharus keeps one ledger of what you have, what's committed and what's on the way, checks everything against it, and brings you the fix to approve.</p>
     </div>
 
-    <div class="ph-why-grid">
+    <div class="ph-why-grid" style="grid-template-columns:repeat(3,minmax(0,1fr))">
       <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
         <div class="ph-mono" style="font-size:12px;color:#3E74F5">01</div>
-        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The $5,000 air-freight bill</h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A production run came up short on pouches nobody reordered. Fix: $5,000 in air freight. Pharus watches materials against the production calendar and drafts the PO at the vendor's lead time.</p>
+        <h3 style="margin:0;font-size:21px;font-weight:600;color:#18181B;letter-spacing:-0.01em;line-height:1.25">You were on the phone all day and logged none of it.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A transfer went to Amazon, the co-pack shipped Friday, thirty orders got handled. When you log in, every one is already drafted from your inbox and your platforms. Approve, approve, approve.</p>
       </div>
       <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
         <div class="ph-mono" style="font-size:12px;color:#3E74F5">02</div>
-        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The campaign with no stock behind it</h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A brand built its biggest Black Friday campaign on inventory that wasn't landing in time. Pharus checks plans and ad spend against replenishment dates and flags the gap before the spend goes out.</p>
+        <h3 style="margin:0;font-size:21px;font-weight:600;color:#18181B;letter-spacing:-0.01em;line-height:1.25">The stock is in the wrong warehouse.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Orders came in and you have the units, just not where they ship from. Pharus recommends the transfer, routes the order to one location, and drafts the emails to both 3PLs.</p>
       </div>
       <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
         <div class="ph-mono" style="font-size:12px;color:#3E74F5">03</div>
-        <h3 style="margin:0;font-size:22px;font-weight:600;color:#18181B;letter-spacing:-0.01em">The order that ships short</h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A PO lands. Pharus checks it against on-hand, committed and inbound before drafting the order, and flags the shortfall the morning it arrives, not the week it ships.</p>
+        <h3 style="margin:0;font-size:21px;font-weight:600;color:#18181B;letter-spacing:-0.01em;line-height:1.25">You placed the production order. You were out of two ingredients.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Pharus checks the bill of materials before the run, finds the vendors you've used, their minimums and the next price break, and drafts the POs.</p>
+      </div>
+    </div>
+    <div class="ph-why-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+      <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+        <div class="ph-mono" style="font-size:12px;color:#3E74F5">04</div>
+        <h3 style="margin:0;font-size:21px;font-weight:600;color:#18181B;letter-spacing:-0.01em;line-height:1.25">It was selling faster than you noticed.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">A SKU outruns its history. Pharus sees it first, recommends the production order early, and spares you the air freight. One brand paid $5,000 to learn this the other way.</p>
+      </div>
+      <div class="ph-card lt" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+        <div class="ph-mono" style="font-size:12px;color:#3E74F5">05</div>
+        <h3 style="margin:0;font-size:21px;font-weight:600;color:#18181B;letter-spacing:-0.01em;line-height:1.25">You don't know which customers make money.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Contribution margin by customer, channel and SKU, from the same ledger that books the orders. No spreadsheet to rebuild every month.</p>
       </div>
     </div>
 
@@ -641,47 +654,47 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
 <section id="day" class="ph-sec" style="scroll-margin-top:68px;background:#0E0E11;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)">
   <div class="ph-wrap" style="display:flex;flex-direction:column;gap:40px">
     <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
-      <div class="ph-eyebrow">A day with Pharus</div>
-      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#FFFFFF">An ordinary Tuesday, handled.</h2>
-      <p style="margin:0;font-size:18px;line-height:1.55;color:#A1A1AA">Every item arrived ready to approve.</p>
+      <div class="ph-eyebrow">Friday, 5:40 PM</div>
+      <h2 class="ph-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.025em;font-weight:700;color:#FFFFFF">You did the work. Pharus kept up.</h2>
+      <p style="margin:0;font-size:18px;line-height:1.55;color:#A1A1AA">A week of phone calls and shipments, none of it logged. It's already here.</p>
     </div>
 
     <div style="display:flex;flex-direction:column;border-bottom:1px solid rgba(255,255,255,0.08)">
       <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">6:12 AM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Drafted three sales orders from the inbox</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Three customer POs overnight. Item numbers matched, stock checked, drafted against the right warehouse.</div></div>
-        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$61,204.19 · one tap to book</div>
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Mon</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Shipped a transfer to Amazon</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Drafted from the carrier confirmation in your inbox. 240 units, NJ to FBA.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">ready to approve</div>
       </div>
       <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">8:40 AM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Caught two orders claiming the same stock</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">96 cases committed twice. Both held, ship order set by delivery date, note to the second customer drafted.</div></div>
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Tue</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Took three POs by phone</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Booked against the right warehouse from the emailed confirmations.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$61,204 · ready to approve</div>
+      </div>
+      <div class="ph-day-row">
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Wed</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Caught two orders claiming the same stock</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">96 cases committed twice. Both held, ship order set by delivery date.</div></div>
         <div class="ph-day-status ph-mono" style="font-size:13px;color:#FBBF24">needs your call</div>
       </div>
       <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">11:05 AM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Drafted a PO for packaging before it ran out</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Film stock would run out before the next production run. PO drafted at the vendor's last price.</div></div>
-        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$18,940.00 · one tap to send</div>
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Thu</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Co-pack run finished</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Receipt drafted from the packer's report. Materials consumed, finished goods in.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">ready to approve</div>
       </div>
       <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">1:30 PM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Flagged an ad campaign heading for a stockout</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">A Meta campaign was selling through faster than replenishment. Recommended a nine-day pause, math attached.</div></div>
-        <div class="ph-day-status ph-mono" style="font-size:13px;color:#FBBF24">needs your call</div>
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Fri</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Pouches running low for next run</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">PO drafted at the vendor's last price and minimum. Lead time covered.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$18,940 · ready to approve</div>
       </div>
       <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">4:55 PM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Prepared a deduction dispute, proof attached</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Shortage claim on a remittance. Signed BOL pulled, dispute written.</div></div>
-        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$2,140.00 · one tap to file</div>
-      </div>
-      <div class="ph-day-row">
-        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">9:00 PM</div>
-        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Proposed the day's journal entries</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Inventory, COGS and deductions drafted for your general ledger. Every line traces to a receipt.</div></div>
-        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">everything ties out · approve to post</div>
+        <div class="ph-mono" style="font-size:13px;color:#8FB0FF;padding-top:3px">Fri</div>
+        <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:600;color:#FFFFFF">Shortage claim on a remittance</div><div style="font-size:15px;color:#A1A1AA;line-height:1.5">Signed BOL pulled, dispute written.</div></div>
+        <div class="ph-day-status ph-mono" style="font-size:13px;color:#4ADE80">$2,140 · ready to approve</div>
       </div>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:6px">
-      <div style="font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.01em">Two needed a real decision.</div>
-      <div style="font-size:22px;font-weight:600;color:#71717A;letter-spacing:-0.01em">The rest took one tap each.</div>
+      <div style="font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.01em">17 items this week. One needed a decision.</div>
+      <div style="font-size:22px;font-weight:600;color:#71717A;letter-spacing:-0.01em">Approve the rest and log off.</div>
     </div>
   </div>
 </section>
@@ -719,7 +732,7 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
           <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Purchase orders and products</li>
           <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>E-commerce connectors</li>
           <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>One external 3PL location</li>
-          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Insights, and Pharus from Claude or ChatGPT</li>
+          <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Insights and reporting</li>
           <li style="display:flex;gap:10px;line-height:1.45"><span style="color:#3E74F5">—</span>Hands-on onboarding with our founding team</li>
         </ul>
         <a class="ph-btn ph-btn-ghost lt" style="margin-top:auto" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qYLwmexrH2hIRVK8Ps4BQxe9T19xiN1eYPXEBkWPQT_efTioUjFx-eiqo6637HYL6Pn1lPMtU">Book a working session</a>
@@ -798,11 +811,11 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
         <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Does it work with my 3PL?</h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">By API, EDI or their daily reports. Tell us who you use and we'll confirm what's live. [LIST LIVE 3PL CONNECTORS]</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">ShipVine, ShipHero, Logiwa, ShipBob and RJW Edge today, by API, EDI or their daily reports. Use someone else? Tell us in the working session.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;border-top:1px solid #E4E4E7">
-        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">Can I use it from Claude or ChatGPT?</h3>
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Yes. Pharus works directly with Claude and Codex: ask about stock, orders or margins and post work back.</p>
+        <h3 style="margin:0;font-size:18px;font-weight:600;color:#18181B">What does it connect to?</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#52525B">Shopify, Amazon, TikTok Shop, Meta and Google Ads, your 3PLs, EDI, your inbox and your accounting system.</p>
       </div>
     </div>
   </div>
@@ -823,15 +836,14 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
 <section style="padding:0 0 96px">
   <div class="ph-wrap">
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 48px;padding:32px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
-      <div style="display:flex;flex-direction:column;gap:6px;flex:1 1 380px;min-width:0">
-        <div style="font-size:18px;font-weight:600;color:#FFFFFF">Know a founder drowning in spreadsheets?</div>
-        <div style="font-size:15px;line-height:1.55;color:#A1A1AA">Introduce us by email: $100 off your next invoice, and a month's credit when they sign.</div>
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1 1 420px;min-width:0">
+        <div style="font-size:18px;font-weight:600;color:#FFFFFF">Know a founder still running ops out of spreadsheets?</div>
+        <div style="font-size:15px;line-height:1.55;color:#A1A1AA">Send one intro email. $100 off your next invoice when it lands, and a month free when they sign. Credits, not cash; no limit.</div>
       </div>
-      <form action="mailto:marshall@pharus.ai" method="get" style="display:flex;flex-wrap:wrap;gap:10px;flex:1 1 360px;min-width:0;margin:0">
-        <label for="ph-ref-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your email</label>
-        <input id="ph-ref-email" class="ph-input" type="email" name="subject" placeholder="Your email">
-        <button type="submit" class="ph-btn ph-btn-ghost">Introduce a founder</button>
-      </form>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a class="ph-btn ph-btn-primary" href="https://app.pharus.ai">Refer from your account</a>
+        <a class="ph-btn ph-btn-ghost" href="mailto:marshall@pharus.ai?subject=Intro%3A%20%5Btheir%20name%5D%20%3C%3E%20Marshall%20%28Pharus%29&body=Hi%20%5Btheir%20name%5D%2C%0A%0ALooping%20in%20Marshall%20from%20Pharus.%20We%20run%20our%20back%20office%20on%20it%3A%20it%20drafts%20our%20POs%2C%20keeps%20inventory%20tied%20out%20and%20matches%20payments%2C%20and%20I%20only%20step%20in%20to%20approve.%0A%0AThought%20it%20was%20worth%20a%2020-minute%20look%20for%20%5Btheir%20brand%5D.%0A%0AMarshall%2C%20%5Btheir%20name%5D%20runs%20%5Btheir%20brand%5D.%20Over%20to%20you%20two.%0A%0A%5Byour%20name%5D">Send the intro email</a>
+      </div>
     </div>
   </div>
 </section>
@@ -847,7 +859,7 @@ a{color:#8FB0FF;text-decoration:none}a:hover{color:#B7CBFF}
       <div style="font-size:14px;color:#71717A;max-width:360px;line-height:1.5">Inventory management for consumer goods brands.</div>
     </div>
     <nav aria-label="Footer" style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
-      <a href="#why">Why</a><a href="#day">A day with Pharus</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="mailto:marshall@pharus.ai">Contact</a><a href="https://app.pharus.ai">Log in</a>
+      <a href="#why">Why</a><a href="#day">Week in the Life</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="mailto:marshall@pharus.ai">Contact</a><a href="https://app.pharus.ai">Log in</a>
     </nav>
     <div class="ph-mono" style="flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12px;color:#71717A;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)">
       <span>© 2026 Pharus Insights Inc.</span><span>pharus.ai</span>
